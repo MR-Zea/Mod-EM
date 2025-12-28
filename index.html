@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mod-Em</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
+  <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+<header>
+  <div class="site-title">
+    <img src="logo.png" class="site-logo">
+    <span style="font-family: 'Minecraft', sans-serif; color:#ff6600;">Mod-Em</span>
+  </div>
+  <div class="header-buttons">
+    <button id="loginBtn">Admim</button>
+    <button id="logoutBtn" style="display:none;">Logout</button>
+    <button id="deleteAllBtn" style="display:none;">Delete ALL</button>
+  </div>
+    <button id="uploadBtn" style="display:none;" class="ss4">+</button>
+</header>
+
+  <!-- Filter & Search -->
+<div class="controls">
+  <select class="ss2" id="categoryFilter">
+    <option value="Mod/Add-on">Mod / Add-on</op>
+    <option value="Texture Pack">Texture Pack</option>
+    <option value="World">World</option>
+    <option value="Datapacks">DataPacks</option>
+  </select>
+  <select class="ss2" id="typeFilter">
+    <option value="Java">Java Edition</op>
+    <option value="Bedrock">Bedrock Edition</option>
+  </select>
+  <input class="ss2" type="text" id="searchInput" placeholder="Cari mod...">
+</div>
+
+<!-- Mod list -->
+<section id="modList"></section>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Admin Login</h2>
+      <div class="login-row">
+    <input type="password" id="adminPass" placeholder="Password">
+           <button id="togglePass">Show</button>
+      </div>
+      <button class="bb" id="submitLogin">Login</button>
+<p class="help-text">
+  Kalau tidak tau passwordnya, silakan
+  <br>
+  <a href="https://wa.me/6285855109257?text=bang%20minta%20password%20nya" target="_blank" class="wa-btn">
+    <svg class="wa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M20.52 3.48A11.8 11.8 0 0 0 12 0C5.37 0 0 5.37 0 12a11.9 11.9 0 0 0 1.61 5.97L0 24l6.24-1.64A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.18-3.48-8.52zM12 21.6c-1.97 0-3.95-.53-5.67-1.54l-.41-.24-3.7.97.99-3.6-.26-.44A9.62 9.62 0 0 1 2.4 12c0-5.29 4.31-9.6 9.6-9.6 2.57 0 4.99 1 6.82 2.82A9.54 9.54 0 0 1 21.6 12c0 5.29-4.31 9.6-9.6 9.6zm5.11-7.16c-.28-.14-1.64-.81-1.89-.9-.26-.1-.45-.14-.64.14-.19.28-.74.9-.91 1.08-.17.19-.34.21-.62.07-.28-.14-1.18-.44-2.25-1.4-.83-.74-1.4-1.66-1.57-1.94-.16-.28-.02-.43.12-.57.13-.13.28-.34.42-.51.14-.17.19-.28.28-.47.09-.19.05-.35-.02-.5-.07-.14-.64-1.54-.87-2.11-.23-.55-.46-.47-.64-.48h-.55c-.19 0-.5.07-.76.35-.26.28-1 1-1 2.46 0 1.45 1.02 2.85 1.16 3.05.14.19 2 3.05 4.84 4.27.68.29 1.21.46 1.62.59.68.21 1.3.18 1.79.11.55-.08 1.64-.67 1.87-1.31.23-.64.23-1.18.16-1.31-.07-.12-.26-.19-.54-.33z" fill="white"/>
+    </svg>
+    Chat Admin di WhatsApp
+  </a>
+</p>
+    </div>
+  </div>
+  
+  <!-- Detail Modal -->
+<div class="modal" id="detailModal">
+  <div class="modal-content">
+    <span class="close" id="closeDetail">&times;</span>
+    <h2 id="detailName"></h2>
+    <p><strong>Type:</strong> <span id="detailType"></span></p>
+    <p><strong>Category:</strong> <span id="detailCategory"></span></p>
+    <p><strong>Version:</strong> <span id="detailVersion"></span></p>
+    <p><strong>Description:</strong> <span id="detailDescription">Deskripsi belum diisi</span></p>
+    <img id="detailScreenshot" alt="Screenshot" style="width:100%;border-radius:5px;margin-top:10px; display:none;">
+    <button id="confirmDownload">Konfirmasi Download</button>
+  </div>
+</div>
+
+  <!-- Upload Modal -->
+  <div id="uploadModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Upload Mod / Texture / World</h2>
+      <form id="uploadForm" class="upload-grid">
+        <!-- Logo kiri -->
+        <div class="upload-logo">
+          <label for="modLogo" class="logo-box" id="logoPreview">Klik untuk pilih logo</label>
+          <input type="file" id="modLogo" accept="image/*" required style="display:none;">
+          <div id="screenshotPreview">Klik untuk pilih screenshot</div>
+        <input type="file" id="modScreenshot" accept="image/*" style="display:none">
+        </div>
+        
+        <!-- Form kanan -->
+        <div class="upload-right">
+          <input class="ss" type="text" id="modName" placeholder="Nama Mod/Texture/World/Datapack" required>
+          <div class="file-upload">
+            <button class="ss" type="button" id="fileBtn">Pilih File</button>
+            <span id="fileName">Belum ada file dipilih</span>
+            <input type="file" id="modFile" required style="display:none;">
+          </div>
+          <textarea id="modDescription" placeholder="Deskripsi mod..." rows="3"></textarea>
+          <select class="ss" id="modType">
+            <option value="Java">Java</option>
+            <option value="Bedrock">Bedrock</option>
+          </select>
+          <select class="ss" id="modCategory">
+            <option value="Mod/Add-on">Mod / Add-on</option>
+            <option value="Texture Pack">Texture Pack</option>
+            <option value="World">World</option>
+            <option value="Datapacks">DataPacks</option>
+          </select>
+          <input class="ss" type="text" id="modVersion" placeholder="Versi" required>
+          <button type="submit">Upload</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <!-- Edit Modal -->
+<div id="editModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeEdit">&times;</span>
+    <h2>Edit Mod</h2>
+    <form id="editForm" class="upload-grid">
+      <div class="upload-logo">
+        <label for="editLogo" class="logo-box" id="editLogoPreview">Klik untuk ganti logo</label>
+        <input type="file" id="editLogo" accept="image/*" style="display:none;">
+        <div id="editScreenshotPreview">Klik untuk ganti screenshot</div>
+        <input type="file" id="editScreenshot" accept="image/*" style="display:none">
+      </div>
+
+      <div class="upload-right">
+        <input class="ss" type="text" id="editName" placeholder="Nama Mod/Texture/World/Datapack" required>
+        <div class="file-upload">
+          <button class="ss" type="button" id="editFileBtn">Ganti File</button>
+          <span id="editFileName">File lama digunakan</span>
+          <input type="file" id="editFile" style="display:none;">
+        </div>
+        <textarea id="editDescription" placeholder="Deskripsi mod..." rows="3"></textarea>
+        <select class="ss" id="editType">
+          <option value="Java">Java</option>
+          <option value="Bedrock">Bedrock</option>
+        </select>
+        <select class="ss" id="editCategory">
+          <option value="Mod/Add-on">Mod / Add-on</option>
+          <option value="Texture Pack">Texture Pack</option>
+          <option value="World">World</option>
+          <option value="Datapacks">DataPacks</option>
+        </select>
+        <input class="ss" type="text" id="editVersion" placeholder="Versi" required>
+        <button type="submit">Simpan Perubahan</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
