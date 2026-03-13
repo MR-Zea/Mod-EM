@@ -460,15 +460,28 @@ if(Number(user)===captchaAnswer){
 
 closeConfirm()
 
-downloadAddon()
+startDownload()
 
 }else{
 
 document.getElementById("captchaResult").innerText="Wrong answer"
-
 generateCaptcha()
 
 }
+
+}
+
+function startDownload(){
+
+let addon = addons[currentAddon]
+
+let a = document.createElement("a")
+a.href = addon.file
+a.download = ""
+
+document.body.appendChild(a)
+a.click()
+document.body.removeChild(a)
 
 }
 
