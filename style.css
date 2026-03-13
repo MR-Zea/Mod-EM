@@ -1,0 +1,68 @@
+body{
+margin:0;
+font-family:Arial;
+background:#1a1a1a;
+color:black;
+}
+
+.main-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#2a2a2a;
+padding:12px 20px;
+border-bottom:3px solid #ff6a00;
+}
+
+.site-title{
+color:#ff6a00;
+}
+
+.logo{
+width:50px;
+height:50px;
+border-radius: 15%;
+}
+
+.platform-select{
+display:flex;
+justify-content:center;
+gap:40px;
+margin-top:100px;
+}
+
+.platform-card{
+background:#2a2a2a;
+padding:40px;
+border-radius:12px;
+text-decoration:none;
+display: flex;
+flex-direction: column;
+align-items: center;
+border-left:10px solid #ff6600;
+color:white;
+}
+
+.mod-list{
+display:grid;
+grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+gap:20px;
+padding:20px;
+}
+
+.mod-card{
+background:#2a2a2a;
+padding:10px;
+border-radius:10px;
+text-align:center;
+border-left:10px solid #ff6600;
+}
+
+.rating span{
+cursor:pointer;
+}
+.img {
+  border-radius: 25%;
+  width: 100px;
+  height: 100px;
+}
