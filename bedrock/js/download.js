@@ -35,6 +35,7 @@ fetch("addons.json")
   loadReviews()
 
 })
+
 function selectRating(r){
 
 selectedRating=r
