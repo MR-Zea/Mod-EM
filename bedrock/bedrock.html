@@ -17,15 +17,21 @@
 <button onclick="goBack()" class="back">BACK</button>
 </header>
 
-<div class="category-filter">
-  <label for="categorySelect">Category :</label>
-  <select id="categorySelect" onchange="filterAddons()">
-    <option value="all">All</option>
-    <option value="addon">Addon</option>
-    <option value="texture">Texture Pack</option>
-    <option value="world">World</option>
-    <option value="skinpack">Skin Pack</option>
-  </select>
+<div class="filter-search">
+  <div class="category-filter">
+    <label for="categorySelect">category :</label>
+    <select id="categorySelect" onchange="filterAddons()">
+      <option value="all">All</option>
+      <option value="addon">Addon</option>
+      <option value="texture">Texture Pack</option>
+      <option value="world">World</option>
+      <option value="skinpack">Skin Pack</option>
+    </select>
+  </div>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search addon..." oninput="filterAddons()">
+  </div>
 </div>
 
 <div class="addon-wrapper">
@@ -33,7 +39,6 @@
     <!-- Addon cards akan dirender di sini -->
   </div>
 </div>
-
 
 <script src="js/main.js"></script>
 </body>
