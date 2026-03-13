@@ -3,8 +3,6 @@ let selectedRating=0
 const ADMIN_PASSWORD = "mieayam"
 let deleteTarget = null
 let deleteType = null
-let downloadFile = ""
-let captchaAnswer = 0
 
 const params=new URLSearchParams(window.location.search)
 const addonFolder=params.get("addon")
@@ -315,7 +313,7 @@ if(!review) return
 
 let timePassed = Date.now() - review.time
 
-// jika kurang dari 10 menit
+// jika kurang dari 5 menit
 if(timePassed < 300000){
 
 if(!confirm("Delete this review?")) return
@@ -428,59 +426,6 @@ input.type="password"
 
 }
 
-function openDownloadConfirm(){
-
-document.getElementById("confirmDownload").style.display="flex"
-
-generateCaptcha()
-
-}
-
-function closeConfirm(){
-
-document.getElementById("confirmDownload").style.display="none"
-
-}
-
-function generateCaptcha(){
-
-let a=Math.floor(Math.random()*10)+1
-let b=Math.floor(Math.random()*10)+1
-
-captchaAnswer=a+b
-
-document.getElementById("captchaText").innerText=a+" + "+b+" = ?"
-
-}
-function verifyDownload(){
-
-let user=document.getElementById("captchaInput").value
-
-if(Number(user)===captchaAnswer){
-
-closeConfirm()
-
-window.open(downloadFile,"_blank")
-
-}else{
-
-document.getElementById("captchaResult").innerText="Wrong answer"
-generateCaptcha()
-
-}
-
-}
-function openDownloadConfirm(){
-
-let addon = addons[currentAddon]
-
-downloadFile = addon.file
-
-document.getElementById("confirmDownload").style.display="flex"
-
-generateCaptcha()
-
-}
 function goBack(){
 window.history.back()
 }
