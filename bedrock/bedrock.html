@@ -17,9 +17,22 @@
 <button onclick="goBack()" class="back">BACK</button>
 </header>
 
-  <div id="addons" class="addon-grid">
-    <!-- Addon cards akan load di sini -->
+<div class="category-filter">
+  <label for="categorySelect">Category :</label>
+  <select id="categorySelect" onchange="filterAddons()">
+    <option value="all">All</option>
+    <option value="addon">Addon</option>
+    <option value="texture">Texture Pack</option>
+    <option value="world">World</option>
+    <option value="skinpack">Skin Pack</option>
+  </select>
+</div>
+
+<div class="addon-wrapper">
+  <div id="addons" class="addon-container">
+    <!-- Addon cards akan dirender di sini -->
   </div>
+</div>
 
 
 <script src="js/main.js"></script>
