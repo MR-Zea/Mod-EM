@@ -29,7 +29,7 @@ card.innerHTML=`
       <p class="card-desc">${a.description}</p>
       <img src="${a.screenshot}" class="card-screen">
       <br>
-      <a href="download.html?addon=${a.folder}" class="btn-download">
+      <a href="download.html?name=${a.name}" class="btn-download">
       Open
       </a>
       <br>
@@ -294,7 +294,7 @@ function filterAddons(){
       <p class="card-desc">${a.description}</p>
       <img src="${a.screenshot}" class="card-screen">
       <br>
-      <a href="download.html?addon=${a.folder}" class="btn-download">
+      <a href="download.html?name=aname" class="btn-download">
       Open
       </a>
       <br>
