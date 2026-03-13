@@ -268,16 +268,20 @@ loadReviews()
 }
 
 function filterAddons(){
-  let select=document.getElementById("categorySelect")
-  let value=select.value
+  let category = document.getElementById("categorySelect").value
+  let search = document.getElementById("searchInput").value.trim().toLowerCase()
 
-  let container=document.getElementById("addons")
+  let container = document.getElementById("addons")
   container.innerHTML=""
 
   let filtered = addons
 
-  if(value !== "all"){
-    filtered = addons.filter(a=>a.category.toLowerCase() === value.toLowerCase())
+  if(category !== "all"){
+    filtered = filtered.filter(a => a.category.toLowerCase() === category.toLowerCase())
+  }
+
+  if(search){
+    filtered = filtered.filter(a => a.name.toLowerCase().includes(search))
   }
 
   filtered.forEach((a,i)=>{
@@ -285,7 +289,7 @@ function filterAddons(){
     card.className="card"
 
     card.innerHTML=`
-      <h3>${a.name}</h3>
+     <h3>${a.name}</h3>
       <img src="${a.logo}" class="card-logo">
       <p class="card-desc">${a.description}</p>
       <img src="${a.screenshot}" class="card-screen">
@@ -297,8 +301,4 @@ function filterAddons(){
     `
     container.appendChild(card)
   })
-}
-
-function goBack() {
-  window.history.back();
 }
