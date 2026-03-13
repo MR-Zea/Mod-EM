@@ -24,18 +24,15 @@ card.className="card"
 
 card.innerHTML=`
 
-<h3>${a.name}</h3>
-
-<img src="${a.logo}" class="card-logo">
-
-<p class="card-desc">${a.description}</p>
-
-<img src="${a.screenshot}" class="card-screen">
-
-<a href="download.html?addon=${a.folder}" class="btn-download">
-Open
-</a>
-
+      <h3>${a.name}</h3>
+      <img src="${a.logo}" class="card-logo">
+      <p class="card-desc">${a.description}</p>
+      <img src="${a.screenshot}" class="card-screen">
+      <br>
+      <a href="download.html?addon=${a.folder}" class="btn-download">
+      Open
+      </a>
+      <br>
 `
 
 container.appendChild(card)
@@ -269,6 +266,39 @@ localStorage.setItem(key,JSON.stringify(reviews))
 loadReviews()
 
 }
+
+function filterAddons(){
+  let select=document.getElementById("categorySelect")
+  let value=select.value
+
+  let container=document.getElementById("addons")
+  container.innerHTML=""
+
+  let filtered = addons
+
+  if(value !== "all"){
+    filtered = addons.filter(a=>a.category.toLowerCase() === value.toLowerCase())
+  }
+
+  filtered.forEach((a,i)=>{
+    let card=document.createElement("div")
+    card.className="card"
+
+    card.innerHTML=`
+      <h3>${a.name}</h3>
+      <img src="${a.logo}" class="card-logo">
+      <p class="card-desc">${a.description}</p>
+      <img src="${a.screenshot}" class="card-screen">
+      <br>
+      <a href="download.html?addon=${a.folder}" class="btn-download">
+      Open
+      </a>
+      <br>
+    `
+    container.appendChild(card)
+  })
+}
+
 function goBack() {
   window.history.back();
 }
