@@ -301,4 +301,4 @@ function filterAddons(){
     `
     container.appendChild(card)
   })
-}
+      }
