@@ -125,22 +125,37 @@ cursor:pointer;
 margin-bottom:15px;
 border-radius: 10px;
 }
+/* Container kategori + search */
+.filter-search{
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:10px;
+  margin:20px 0;
+  flex-wrap:nowrap; /* paksa tetap di satu baris */
+}
 
-.category-filter{
-margin:20px 0;
-display:flex;
-align-items:center;
-gap:10px;
-font-family:Arial, sans-serif;
-color:#fff;
+.category-filter label{
+  color:white;
+  margin-right:5px;
 }
 
 .category-filter select{
-padding:6px 10px;
-border-radius:6px;
-border:none;
-background:#ff7a00;
-color:white;
-cursor:pointer;
-font-size:14px;
+  padding:6px 10px;
+  border-radius:6px;
+  border:none;
+  background:#ff7a00;
+  color:white;
+  cursor:pointer;
+  font-size:14px;
+}
+
+.search-box input{
+  padding:6px 10px;
+  border-radius:6px;
+  border:none;
+  font-size:14px;
+  outline:none;
+  width:200px;
+  min-width:120px; /* agar tidak terlalu kecil di HP */
 }
