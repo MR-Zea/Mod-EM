@@ -33,35 +33,8 @@
 
 <p id="addonDesc"></p>
 
-<button onclick="openDownloadConfirm()">Download</button>
-<div id="confirmDownload" class="confirm-download">
+<a id="downloadBtn" class="download-btn" target="_blank">Download</a>
 
-<div class="confirm-box">
-
-<h3>Confirm Download</h3>
-
-<p>Please verify you are not a robot before downloading.</p>
-
-<div class="captcha-question">
-<span id="captchaText"></span>
-</div>
-
-<input id="captchaInput" placeholder="Answer">
-
-<button onclick="verifyDownload()" class="confirm-btn">
-Confirm Download
-</button>
-
-<button onclick="closeConfirm()" class="cancel-btn">
-Cancel
-</button>
-
-<p id="captchaResult"></p>
-
-</div>
-
-</div>
-  
 <div class="rating-info">
 
 ⭐ <span id="avgRating">0</span>
