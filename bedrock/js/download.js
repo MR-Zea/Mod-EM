@@ -3,6 +3,7 @@ let selectedRating=0
 const ADMIN_PASSWORD = "mieayam"
 let deleteTarget = null
 let deleteType = null
+let captchaAnswer=0
 
 const params=new URLSearchParams(window.location.search)
 const addonFolder=params.get("addon")
@@ -422,6 +423,51 @@ if(input.type==="password"){
 input.type="text"
 }else{
 input.type="password"
+}
+
+}
+
+function openDownloadConfirm(){
+
+document.getElementById("confirmDownload").style.display="flex"
+
+generateCaptcha()
+
+}
+
+function closeConfirm(){
+
+document.getElementById("confirmDownload").style.display="none"
+
+}
+
+function generateCaptcha(){
+
+let a=Math.floor(Math.random()*10)+1
+let b=Math.floor(Math.random()*10)+1
+
+captchaAnswer=a+b
+
+document.getElementById("captchaText").innerText=a+" + "+b+" = ?"
+
+}
+
+function verifyDownload(){
+
+let user=document.getElementById("captchaInput").value
+
+if(Number(user)===captchaAnswer){
+
+closeConfirm()
+
+downloadAddon()
+
+}else{
+
+document.getElementById("captchaResult").innerText="Wrong answer"
+
+generateCaptcha()
+
 }
 
 }
