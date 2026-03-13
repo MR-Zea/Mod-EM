@@ -16,5 +16,14 @@
     "logo": "addons/44WaysToprankAdd-on/logo.png",
     "screenshot": "addons/44WaysToprankAdd-on/game.png",
     "description": "addon yg menambahkan 44 cara ngeprank temen kamu"
-  }
+  },
+    {
+    "name": "Action & Stuff 1.9",
+    "category": "texture",
+    "folder": "ActionsStuff1.9",
+    "file":"addons/ActionsStuff1.9/Actions Stuff 1.9.mcpack",
+    "logo":"addons/ActionsStuff1.9/logo.png",
+    "screenshot":"addons/ActionsStuff1.9/game.png",
+    "description":"Action Stuff Minecraft adalah texture yang menambahkan gerakan, efek, dan aksi keren agar permainan terasa lebih seru dan dramatis."
+    }
   ]
