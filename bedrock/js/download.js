@@ -314,7 +314,7 @@ if(!review) return
 let timePassed = Date.now() - review.time
 
 // jika kurang dari 10 menit
-if(timePassed < 3000){
+if(timePassed < 300000){
 
 if(!confirm("Delete this review?")) return
 
