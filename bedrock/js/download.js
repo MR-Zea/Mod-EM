@@ -4,30 +4,37 @@ const ADMIN_PASSWORD = "mieayam"
 let deleteTarget = null
 let deleteType = null
 
-const params=new URLSearchParams(window.location.search)
-const addonFolder=params.get("addon")
-
 fetch("addons.json")
-.then(r=>r.json())
-.then(data=>{
+.then(r => r.json())
+.then(data => {
 
-currentAddon=data.find(a=>a.folder===addonFolder)
+  // Ambil nama addon dari URL ?name=
+  const params = new URLSearchParams(window.location.search)
+  const addonName = params.get("name")
+  if(!addonName){
+    document.body.innerHTML = "Addon tidak ditemukan"
+    return
+  }
 
-if(!currentAddon){
-document.body.innerHTML="Addon tidak ditemukan"
-return
-}
+  // Cari addon berdasarkan name
+  currentAddon = data.find(a => a.name === addonName)
 
-document.getElementById("addonName").innerText=currentAddon.name
-document.getElementById("addonDesc").innerText=currentAddon.description
-document.getElementById("addonScreenshot").src=currentAddon.screenshot
-document.getElementById("addonLogo").src=currentAddon.logo
-document.getElementById("downloadBtn").href=currentAddon.file
+  if(!currentAddon){
+    document.body.innerHTML = "Addon tidak ditemukan"
+    return
+  }
 
-loadReviews()
+  // Tampilkan info addon
+  document.getElementById("addonName").innerText = currentAddon.name
+  document.getElementById("addonDesc").innerText = currentAddon.description
+  document.getElementById("addonScreenshot").src = currentAddon.screenshot
+  document.getElementById("addonLogo").src = currentAddon.logo
+  document.getElementById("downloadBtn").href = currentAddon.file
+
+  // Load review & rating
+  loadReviews()
 
 })
-
 function selectRating(r){
 
 selectedRating=r
