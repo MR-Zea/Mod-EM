@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Mod-Em - Bedrock - Download</title>
+
+<link rel="stylesheet" href="css/download.css">
+
+</head>
+
+<body>
+
+<header class="main-header">
+
+<div>
+<img src="logo.png" class="logo">
+<h1 class="site-title">MOD-EM</h1>
+</div>
+<button class="back" onclick="goBack()">BACK</button>
+</header>
+<div class="container">
+
+<div class="addon-box">
+
+<img id="addonLogo" class="addon-logo">
+
+<h1 id="addonName"></h1>
+
+<img id="addonScreenshot" class="addon-screen">
+
+<p id="addonDesc"></p>
+
+<a id="downloadBtn" class="download-btn" target="_blank">Download</a>
+
+<div class="rating-info">
+
+⭐ <span id="avgRating">0</span>
+(<span id="ratingCount">0</span> reviews)
+
+</div>
+
+</div>
+
+<div class="review-box">
+
+<h2>Reviews</h2>
+
+<div class="stars">
+<span class="star" onclick="selectRating(1)">⭐</span>
+<span class="star" onclick="selectRating(2)">⭐</span>
+<span class="star" onclick="selectRating(3)">⭐</span>
+<span class="star" onclick="selectRating(4)">⭐</span>
+<span class="star" onclick="selectRating(5)">⭐</span>
+</div>
+
+<input id="reviewName" placeholder="Your name">
+
+<input id="reviewAvatar" type="file" accept="image/*" hidden>
+
+<button onclick="document.getElementById('reviewAvatar').click()" class="avatar-btn">
+Upload Avatar
+</button>
+
+<textarea id="reviewText" placeholder="Write review"></textarea>
+
+<button onclick="submitReview()" class="submit">Submit Review</button>
+
+<div id="reviewList"></div>
+
+</div>
+
+<div id="adminPopup" class="admin-popup">
+<div class="admin-box">
+<h3>Owner Password</h3>
+
+<div class="password-box">
+
+<input id="adminPassword" type="password" placeholder="Enter password">
+
+<button class="show-pass" onclick="togglePassword()">👁</button>
+
+</div>
+
+<div class="admin-buttons">
+<button onclick="confirmAdminDelete()">Confirm</button>
+<button onclick="closeAdminPopup()">Cancel</button>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<script src="js/download.js"></script>
+
+</body>
+</html>

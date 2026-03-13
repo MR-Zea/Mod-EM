@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Essentials (addon)",
+    "category": "addon",
+    "folder": "Essentialsaddon",
+    "file": "addons/Essentialsaddon/Essentialsaddon.mcaddon",
+    "logo": "addons/Essentialsaddon/logo.png",
+    "screenshot": "addons/Essentialsaddon/game.png",
+    "description": "addon yg membantu saat sedang survival"
+  },
+  {
+    "name": "44 Ways To prank Add-on",
+    "category": "addon",
+    "folder": "44WaysToprankAdd-on",
+    "file": "addons/44WaysToprankAdd-on/44WaysToprankAdd-on.mcaddon",
+    "logo": "addons/44WaysToprankAdd-on/logo.png",
+    "screenshot": "addons/44WaysToprankAdd-on/game.png",
+    "description": "addon yg menambahkan 44 cara ngeprank temen kamu"
+  }
+  ]
