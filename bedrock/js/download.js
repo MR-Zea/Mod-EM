@@ -3,7 +3,8 @@ let selectedRating=0
 const ADMIN_PASSWORD = "mieayam"
 let deleteTarget = null
 let deleteType = null
-let captchaAnswer=0
+let downloadFile = ""
+let captchaAnswer = 0
 
 const params=new URLSearchParams(window.location.search)
 const addonFolder=params.get("addon")
@@ -451,7 +452,6 @@ captchaAnswer=a+b
 document.getElementById("captchaText").innerText=a+" + "+b+" = ?"
 
 }
-
 function verifyDownload(){
 
 let user=document.getElementById("captchaInput").value
@@ -460,7 +460,7 @@ if(Number(user)===captchaAnswer){
 
 closeConfirm()
 
-startDownload()
+window.open(downloadFile,"_blank")
 
 }else{
 
@@ -470,21 +470,17 @@ generateCaptcha()
 }
 
 }
-
-function startDownload(){
+function openDownloadConfirm(){
 
 let addon = addons[currentAddon]
 
-let a = document.createElement("a")
-a.href = addon.file
-a.download = ""
+downloadFile = addon.file
 
-document.body.appendChild(a)
-a.click()
-document.body.removeChild(a)
+document.getElementById("confirmDownload").style.display="flex"
+
+generateCaptcha()
 
 }
-
 function goBack(){
 window.history.back()
 }
