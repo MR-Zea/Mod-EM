@@ -53,5 +53,16 @@
     "description":"Survive on a raft in the ocean by fishing, gathering resources, and expanding your raft.",
     "fullDescription": "You're stranded on a raft in the middle of the ocean!\nSurvive by fishing, collecting materials from the water, and expanding your raft.\nTrade with Milo for maps to discover new islands.\nCan you survive 100 days on a raft?\n\n• Sharks\n• Custom weapons\n• Custom raft with furniture",
     "rating": 3.5
+  },
+  {
+    "name": "RLCraft Bedrock Edition 1.2",
+    "category": "world",
+    "folder": "RLcraft",
+    "file":"https://www.mediafire.com/file/8r0bhi728vftq6u/RLCraft_Bedrock_Edition_1.2_%2528world_template%2529.mctemplate/file",
+    "logo":"addons/RLcraft/logo.png",
+    "screenshot":"addons/RLcraft/thumbnail.png",
+    "description":"A brutal hardcore survival experience with dungeons, dragons, new gear, and challenging gameplay.",
+    "fullDescription": "RLCraft is here — hardcore, unforgiving, and brutally challenging.\n\n• Explore new world generation with structures & dungeons\n• Progress your skills and wield powerful gear\n• Custom player and weapon animations\n• Elemental dragons\n• Based on the original RLCraft Modpack by Shivaxi\n• You're going to die… a lot",
+    "rating": 4.5
   }
 ]
