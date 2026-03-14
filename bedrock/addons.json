@@ -6,7 +6,9 @@
     "file": "addons/Essentialsaddon/Essentials (addon).mcaddon",
     "logo": "addons/Essentialsaddon/logo.png",
     "screenshot": "addons/Essentialsaddon/game.png",
-    "description": "addon yg membantu saat sedang survival"
+    "description": "Adds many useful features to Minecraft like tree breaker, ore scanner, portable crafting tools, teleporters, and more to make survival easier.",
+    "fullDescription": "Essential Additions to Minecraft! Say goodbye to doing boring chores!\n\n• Repairable Anvil\n• Sideways Slabs\n• Storage Satchels\n• Automatic Crop Re-Planting\n• Portable Crafting Table, Ender Chest, and Furnace\n• Ore Breaker\n• Tree Breaker\n• Ore Scanners\n• Mining Helmet\n• Universal Remote – Change Time, Weather & More\n• Death Waypoint\n• Fake Blocks\n• Teleporters\n• ...and a lot more!",
+    "rating": 4.5
   },
   {
     "name": "44 Ways To prank Add-on",
@@ -15,15 +17,19 @@
     "file": "addons/44WaysToprankAdd-on/44 Ways To prank Add-on.mcaddon",
     "logo": "addons/44WaysToprankAdd-on/logo.png",
     "screenshot": "addons/44WaysToprankAdd-on/game.png",
-    "description": "addon yg menambahkan 44 cara ngeprank temen kamu"
+    "description": "Adds 44 funny prank items like fake blocks, exploding beds, fake lava, and other surprises to trick your friends.",
+    "fullDescription": "44 Ways to Prank Add-On brings 44 hilarious prank items to your world!\n\n• Trick friends with fake blocks\n• Exploding beds\n• Fake lava\n• Exploding cakes\n• Prank tables that spawn creepers\n• And many more surprises\n\nFun, unpredictable, and full of laughter every time you play!",
+    "rating": 4
   },
-    {
+  {
     "name": "Action And Stuff 1.9",
     "category": "texture",
     "folder": "ActionsStuff1.9",
     "file":"addons/ActionsStuff1.9/Actions Stuff 1.9.mcpack",
     "logo":"addons/ActionsStuff1.9/logo.png",
     "screenshot":"addons/ActionsStuff1.9/game.png",
-    "description":"Action Stuff adalah texture yang menambahkan gerakan, efek, dan aksi keren agar permainan terasa lebih seru dan dramatis."
-    }
-  ]
+    "description":"Enhances Minecraft with new player and mob animations, 3D item models, custom armour, and vibrant visual improvements.",
+    "fullDescription": "The Animation Pack You Didn't Know You Needed: Bring your world to life with new animations, particles, textures, and more!\n\n• Player Animations (1st & 3rd Person)\n• New & Improved Mob Animations\n• 3D Item Models\n• Custom Armour\n• A Complete & Faithful Texture Overhaul\n• Compatible with Vanilla Textures or Your Own Texture Packs\n• Now with 100% More Vibrant Visuals",
+    "rating": 5
+  }
+]
