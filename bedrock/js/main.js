@@ -2,7 +2,6 @@ let addons = []
 let currentAddon = 0
 let selectedRating = 0
 
-
 fetch("addons.json")
 .then(r=>r.json())
 .then(data=>{
@@ -33,6 +32,10 @@ card.innerHTML=`
       Open
       </a>
       <br>
+      <div class="card-rating">
+${generateStars(a.rating)}
+</div>
+
 `
 
 container.appendChild(card)
@@ -298,7 +301,38 @@ function filterAddons(){
       Open
       </a>
       <br>
+      <div class="card-rating">
+${generateStars(a.rating)}
+</div>
+
     `
     container.appendChild(card)
   })
-      }
+}
+
+function generateStars(rating){
+
+let r = parseFloat(rating) || 0
+
+let fullStars = Math.floor(r)
+let halfStar = r % 1 >= 0.5
+
+let html = ""
+
+for(let i=0;i<fullStars;i++){
+html += '<img src="assets/star_full.png" class="star">'
+}
+
+if(halfStar){
+html += '<img src="assets/star_half.png" class="star">'
+}
+
+let empty = 5 - fullStars - (halfStar ? 1 : 0)
+
+for(let i=0;i<empty;i++){
+html += '<img src="assets/star_empty.png" class="star">'
+}
+
+return html
+
+}
