@@ -37,58 +37,20 @@
 
 <div class="rating-info">
 
-⭐ <span id="avgRating">0</span>
-(<span id="ratingCount">0</span> reviews)
-
+<div id="ratingSection">
+<p>Rating: <span id="addonRating"></span></p>
+</div>
 </div>
 
 </div>
 
 <div class="review-box">
 
-<h2>Reviews</h2>
-
-<div class="stars">
-<span class="star" onclick="selectRating(1)">⭐</span>
-<span class="star" onclick="selectRating(2)">⭐</span>
-<span class="star" onclick="selectRating(3)">⭐</span>
-<span class="star" onclick="selectRating(4)">⭐</span>
-<span class="star" onclick="selectRating(5)">⭐</span>
-</div>
-
-<input id="reviewName" placeholder="Your name">
-
-<input id="reviewAvatar" type="file" accept="image/*" hidden>
-
-<button onclick="document.getElementById('reviewAvatar').click()" class="avatar-btn">
-Upload Avatar
-</button>
-
-<textarea id="reviewText" placeholder="Write review"></textarea>
-
-<button onclick="submitReview()" class="submit">Submit Review</button>
-
-<div id="reviewList"></div>
-
-</div>
-
-<div id="adminPopup" class="admin-popup">
-<div class="admin-box">
-<h3>Owner Password</h3>
-
-<div class="password-box">
-
-<input id="adminPassword" type="password" placeholder="Enter password">
-
-<button class="show-pass" onclick="togglePassword()">👁</button>
-
-</div>
-
-<div class="admin-buttons">
-<button onclick="confirmAdminDelete()">Confirm</button>
-<button onclick="closeAdminPopup()">Cancel</button>
-</div>
-
+<div id="reviewSection">
+  <p>Ingin memberi review atau feedback? Gabung Discord kami:</p>
+  
+  <!-- Discord widget -->
+<iframe src="https://discord.com/widget?id=1454827515901120707&theme=dark" width="500" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 </div>
 
 </div>
