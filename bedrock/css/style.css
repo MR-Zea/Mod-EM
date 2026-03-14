@@ -23,7 +23,6 @@ height:50px;
 border-radius: 15%;
 }
 
-/* GRID FLEX */
 /* Wrapper dengan scroll vertikal jika tinggi terbatas */
 .addon-wrapper{
   max-height:80vh; /* bisa disesuaikan */
@@ -158,4 +157,13 @@ border-radius: 10px;
   outline:none;
   width:200px;
   min-width:120px; /* agar tidak terlalu kecil di HP */
+}
+.card-rating{
+margin:5px 0;
+}
+
+.star{
+width:16px;
+height:16px;
+margin-right:2px;
 }
