@@ -61,6 +61,22 @@ document.getElementById("addonRating").innerHTML = starsHTML + " ("+rating+"/5)"
 
 })
 
+document.querySelectorAll(".card img, #addonScreenshot")
+.forEach(img => {
+
+  img.addEventListener("click", function(){
+
+    document.getElementById("imgModal").style.display = "block"
+    document.getElementById("imgPreview").src = this.src
+
+  })
+
+})
+
+document.querySelector(".img-close").onclick = function(){
+  document.getElementById("imgModal").style.display = "none"
+}
+
 
 function goBack(){
 window.location.href = "https://mod-em.vercel.app/bedrock/bedrock.html";
