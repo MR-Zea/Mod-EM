@@ -336,3 +336,19 @@ html += '<img src="assets/star_empty.png" class="star">'
 return html
 
 }
+
+document.querySelectorAll(".card img, #addonScreenshot")
+.forEach(img => {
+
+  img.addEventListener("click", function(){
+
+    document.getElementById("imgModal").style.display = "block"
+    document.getElementById("imgPreview").src = this.src
+
+  })
+
+})
+
+document.querySelector(".img-close").onclick = function(){
+  document.getElementById("imgModal").style.display = "none"
+}
