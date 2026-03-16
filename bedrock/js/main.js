@@ -337,18 +337,29 @@ return html
 
 }
 
-document.querySelectorAll(".card img, #addonScreenshot")
-.forEach(img => {
+setTimeout(()=>{
 
-  img.addEventListener("click", function(){
+let modal = document.getElementById("imgModal")
+let modalImg = document.getElementById("imgShow")
+let closeBtn = document.getElementById("closeImg")
 
-    document.getElementById("imgModal").style.display = "block"
-    document.getElementById("imgPreview").src = this.src
+document.querySelectorAll("img").forEach(img=>{
 
-  })
+  img.style.cursor="pointer"
+
+  img.onclick = function(){
+    modal.style.display="block"
+    modalImg.src = this.src
+  }
 
 })
 
-document.querySelector(".img-close").onclick = function(){
-  document.getElementById("imgModal").style.display = "none"
+closeBtn.onclick = function(){
+  modal.style.display="none"
 }
+
+modal.onclick = function(){
+  modal.style.display="none"
+}
+
+},500)
