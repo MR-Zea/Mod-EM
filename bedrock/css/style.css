@@ -182,7 +182,7 @@ height:16px;
 margin-right:2px;
 }
 
-.img-modal{
+.imgModal{
 display:none;
 position:fixed;
 z-index:9999;
@@ -190,28 +190,27 @@ left:0;
 top:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.9);
+background:rgba(0,0,0,0.95);
+text-align:center;
 }
 
-.img-modal-content{
-display:block;
-margin:auto;
+#imgShow{
 max-width:90%;
 max-height:90%;
 margin-top:3%;
-border-radius:10px;
-animation:zoomImg 0.3s;
+border-radius:12px;
+animation:zoom .25s;
 }
 
-@keyframes zoomImg{
-from{transform:scale(0.7);opacity:0;}
-to{transform:scale(1);opacity:1;}
+@keyframes zoom{
+from{transform:scale(.7);opacity:0}
+to{transform:scale(1);opacity:1}
 }
 
-.img-close{
+#closeImg{
 position:absolute;
-top:20px;
 right:40px;
+top:20px;
 font-size:40px;
 color:white;
 cursor:pointer;
