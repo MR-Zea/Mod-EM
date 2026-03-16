@@ -24,20 +24,10 @@ fetch("addons.json")
   // Tampilkan info addon
   document.getElementById("addonName").innerText = currentAddon.name
   // Tampilkan deskripsi lengkap
-document.getElementById("addonDesc").innerText = currentAddon.fullDescription
+  document.getElementById("addonDesc").innerText = currentAddon.fullDescription
   document.getElementById("addonScreenshot").src = currentAddon.screenshot
   document.getElementById("addonLogo").src = currentAddon.logo
   document.getElementById("downloadBtn").href = currentAddon.file
-getFileSize(currentAddon.file).then(size => {
-
-  document.getElementById("addonSize").innerText =
-  "Ukuran File : " + size
-
-  document.getElementById("downloadBtn").innerText =
-  "Download (" + size + ")"
-
-})
-  
   document.getElementById("addonRating").innerText = currentAddon.rating
   
 let rating = parseFloat(currentAddon.rating) || 0
