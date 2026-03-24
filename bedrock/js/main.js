@@ -343,7 +343,8 @@ let modal = document.getElementById("imgModal")
 let modalImg = document.getElementById("imgShow")
 let closeBtn = document.getElementById("closeImg")
 
-document.querySelectorAll(".card img").forEach(img=>{
+// ⬇️ HANYA class preview-img
+document.querySelectorAll(".preview-img").forEach(img=>{
 
   img.style.cursor="pointer"
 
@@ -358,8 +359,10 @@ closeBtn.onclick = function(){
   modal.style.display="none"
 }
 
-modal.onclick = function(){
-  modal.style.display="none"
+modal.onclick = function(e){
+  if(e.target === modal){
+    modal.style.display="none"
+  }
 }
 
 },500)
