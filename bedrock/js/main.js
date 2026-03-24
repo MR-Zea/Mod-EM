@@ -343,7 +343,7 @@ let modal = document.getElementById("imgModal")
 let modalImg = document.getElementById("imgShow")
 let closeBtn = document.getElementById("closeImg")
 
-document.querySelectorAll("img").forEach(img=>{
+document.querySelectorAll(".card img").forEach(img=>{
 
   img.style.cursor="pointer"
 
