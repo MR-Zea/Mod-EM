@@ -336,33 +336,3 @@ html += '<img src="assets/star_empty.png" class="star">'
 return html
 
 }
-
-setTimeout(()=>{
-
-let modal = document.getElementById("imgModal")
-let modalImg = document.getElementById("imgShow")
-let closeBtn = document.getElementById("closeImg")
-
-// ⬇️ HANYA class preview-img
-document.querySelectorAll(".preview-img").forEach(img=>{
-
-  img.style.cursor="pointer"
-
-  img.onclick = function(){
-    modal.style.display="block"
-    modalImg.src = this.src
-  }
-
-})
-
-closeBtn.onclick = function(){
-  modal.style.display="none"
-}
-
-modal.onclick = function(e){
-  if(e.target === modal){
-    modal.style.display="none"
-  }
-}
-
-},500)
