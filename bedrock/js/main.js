@@ -336,3 +336,7 @@ html += '<img src="assets/star_empty.png" class="star">'
 return html
 
 }
+
+function goBack(){
+window.location.href = "https://mod-em.vercel.app/";
+}
