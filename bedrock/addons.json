@@ -72,8 +72,8 @@
     "file":"https://archive.org/download/rlcraft-bedrock-edition-1.2-world-template/RLCraft%20Bedrock%20Edition%201.2%20%28world_template%29.mctemplate",
     "logo":"addons/DarkFantasyVisual/logo.png",
     "screenshot":"addons/DarkFantasyVisual/thumbnail.png",
-    "description":"A brutal hardcore survival experience with dungeons, dragons, new gear, and challenging gameplay.",
-    "fullDescription": "RLCraft is here — hardcore, unforgiving, and brutally challenging.\n\n• Explore new world generation with structures & dungeons\n• Progress your skills and wield powerful gear\n• Custom player and weapon animations\n• Elemental dragons\n• Based on the original RLCraft Modpack by Shivaxi\n• You're going to die… a lot",
-    "rating": 4.5
+    "description":"Adds dark fantasy visuals with moody lighting, shadows, and dramatic atmosphere.",
+    "fullDescription": "Immerse yourself in dark fantasy visuals with moody lighting, deep shadows, realistic shading, and clear god rays for a dramatic atmosphere.\n\n[!] Dark Fantasy Visuals is not a shader.",
+    "rating": 4
   }
 ]
