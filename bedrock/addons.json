@@ -68,10 +68,10 @@
    {
     "name": "Dark Fantasy Visual",
     "category": "texture",
-    "folder": "DarkFantasyVisual",
+    "folder": "DarkFantasyVisuals",
     "file":"https://archive.org/download/rlcraft-bedrock-edition-1.2-world-template/RLCraft%20Bedrock%20Edition%201.2%20%28world_template%29.mctemplate",
-    "logo":"addons/DarkFantasyVisual/logo.png",
-    "screenshot":"addons/DarkFantasyVisual/thumbnail.png",
+    "logo":"addons/DarkFantasyVisuals/logo.png",
+    "screenshot":"addons/DarkFantasyVisuals/thumbnail.png",
     "description":"Adds dark fantasy visuals with moody lighting, shadows, and dramatic atmosphere.",
     "fullDescription": "Immerse yourself in dark fantasy visuals with moody lighting, deep shadows, realistic shading, and clear god rays for a dramatic atmosphere.\n\n[!] Dark Fantasy Visuals is not a shader.",
     "rating": 4
