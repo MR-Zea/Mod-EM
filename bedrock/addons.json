@@ -75,5 +75,16 @@
     "description":"Adds dark fantasy visuals with moody lighting, shadows, and dramatic atmosphere.",
     "fullDescription": "Immerse yourself in dark fantasy visuals with moody lighting, deep shadows, realistic shading, and clear god rays for a dramatic atmosphere.\n\n[!] Dark Fantasy Visuals is not a shader.",
     "rating": 4
-  }
+   },
+   {
+    "name": "BackRoom Escape",
+    "category": "world",
+    "folder": "BackRoom",
+    "file":"https://archive.org/download/backroom-escape-world-template/Backroom%20Escape%20%28world_template%29.mctemplate%29.mctemplate",
+    "logo":"addons/BackRoom/logo.png",
+    "screenshot":"addons/BackRoom/thumbnail.png",
+    "description":"A horror experience with darkness, monsters, and intense survival gameplay.",
+    "fullDescription": "Mom?! Are you here? RUN!\n\nNO ONE CAN ESCAPE\n\n• Total darkness\n• Scary monster\n• 5 levels\n• Survivor skins",
+    "rating": 2.5
+   }
 ]
