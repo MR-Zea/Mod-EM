@@ -86,5 +86,16 @@
     "description":"A horror experience with darkness, monsters, and intense survival gameplay.",
     "fullDescription": "Mom?! Are you here? RUN!\n\nNO ONE CAN ESCAPE\n\n• Total darkness\n• Scary monster\n• 5 levels\n• Survivor skins",
     "rating": 2.5
+   },
+   {
+    "name": "World Builder 16.1",
+    "category": "addon",
+    "folder": "worldbuilder",
+    "file":"https://archive.org/download/world-builder-1.6.1-add-on-addon/World%20Builder%201.6.1%20Add-On%20%28addon%29.mcaddon",
+    "logo":"addons/worldbuilder/pack_icon.png",
+    "screenshot":"addons/worldbuilder/image_1.jpg",
+    "description":"Fast & easy world editing tool.",
+    "fullDescription": "Unleash your creativity with World Builder, the ultimate building tool!\nWith intuitive selection, effortless copy-pasting, quick undo/redo actions, & custom brushes, you can easily edit entire landscapes & structures.\nCrafting your dream world has never been simpler, or faster!\n\n- Copy, Cut, Paste, Rotate & Flip\n- Custom Brushes\n- Terrain Painting Tools\n- And much more!",
+    "rating": 2.5
    }
 ]
