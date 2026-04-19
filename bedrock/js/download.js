@@ -61,33 +61,6 @@ document.getElementById("addonRating").innerHTML = starsHTML + " ("+rating+"/5)"
 
 })
 
-setTimeout(()=>{
-
-let modal = document.getElementById("imgModal")
-let modalImg = document.getElementById("imgShow")
-let closeBtn = document.getElementById("closeImg")
-
-document.querySelectorAll("img").forEach(img=>{
-
-  img.style.cursor="pointer"
-
-  img.onclick = function(){
-    modal.style.display="block"
-    modalImg.src = this.src
-  }
-
-})
-
-closeBtn.onclick = function(){
-  modal.style.display="none"
-}
-
-modal.onclick = function(){
-  modal.style.display="none"
-}
-
-},500)
-
 function goBack(){
 window.location.href = "https://mod-em.vercel.app/bedrock/bedrock.html";
 }
