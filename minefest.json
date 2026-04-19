@@ -1,0 +1,20 @@
+{
+  "name": "MOD-EM",
+  "short_name": "MOD-EM",
+  "description": "Download Add-on/Mod Free",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#121212",
+  "theme_color": "#ff6600",
+  "lang": "id-ID",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "1280x1280",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
