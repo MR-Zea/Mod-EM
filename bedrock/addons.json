@@ -22,12 +22,12 @@
     "rating": 4
   },
   {
-    "name": "Action And Stuff 1.9",
+    "name": "Action And Stuff 1.10",
     "category": "texture",
-    "folder": "ActionsStuff1.9",
-    "file":"https://archive.org/download/actions-stuff-1.9-resources/Actions%20Stuff%201.9%20%28resources%29.mcpack",
-    "logo":"addons/ActionsStuff1.9/logo.png",
-    "screenshot":"addons/ActionsStuff1.9/thumbnail.png",
+    "folder": "ActionsStuff1.10",
+    "file":"https://archive.org/download/actions-stuff-1.10-resources/Actions%20Stuff%201.10%20%28resources%29.mcpack",
+    "logo":"addons/ActionsStuff1.10/logo.png",
+    "screenshot":"addons/ActionsStuff1.10/thumbnail.png",
     "description":"Enhances Minecraft with new player and mob animations, 3D item models, custom armour, and vibrant visual improvements.",
     "fullDescription": "The Animation Pack You Didn't Know You Needed: Bring your world to life with new animations, particles, textures, and more!\n\n• Player Animations (1st & 3rd Person)\n• New & Improved Mob Animations\n• 3D Item Models\n• Custom Armour\n• A Complete & Faithful Texture Overhaul\n• Compatible with Vanilla Textures or Your Own Texture Packs\n• Now with 100% More Vibrant Visuals",
     "rating": 5
