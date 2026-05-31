@@ -62,5 +62,5 @@ document.getElementById("addonRating").innerHTML = starsHTML + " ("+rating+"/5)"
 })
 
 function goBack(){
-window.location.href = "https://mod-em.vercel.app/bedrock/bedrock.html";
+window.location.href = "https://mod-em.vercel.app/bedrock/home.html";
 }
