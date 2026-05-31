@@ -138,45 +138,58 @@ cursor:pointer;
 margin-bottom:15px;
 border-radius: 10px;
 }
-/* Container kategori + search */
-.filter-search{
-  display:flex;
-  align-items:center;
-  justify-content:flex-start;
-  gap:10px;
-  margin:20px 0;
-  flex-wrap:nowrap; /* paksa tetap di satu baris */
+/* Kotak Utama Pembungkus Category & Search */
+.filter-search {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;       /* Supaya rapi dan otomatis turun kalau dibuka di HP kecil */
+  gap: 15px;
   
+  /* Efek Kotak */
   background-color: #1a1a1a; /* Warna kotak (bisa disesuaikan dengan tema webmu) */
   border: 1px solid #333;    /* Garis tepi tipis agar berbentuk kotak */
   border-radius: 8px;        /* Sudut kotak dibuat agak melengkung/halus */
   padding: 12px 20px;        /* Jarak dalam kotak agar tidak mentok ke pinggir */
-  margin-bottom: 20px;       /* Jarak kotak ini dengan konten */
+  margin-bottom: 20px;       /* Jarak kotak ini dengan konten add-on di bawahnya */
 }
 
-.category-filter label{
-  color:white;
-  margin-right:5px;
+/* Label Tulisan "category :" */
+.category-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #aaaaaa;            /* Warna teks abu-abu terang */
+  font-family: sans-serif;
+  font-size: 14px;
 }
 
-.category-filter select{
-  padding:6px 10px;
-  border-radius:6px;
-  border:none;
-  background:#ff7a00;
-  color:white;
-  cursor:pointer;
-  font-size:14px;
+/* Tombol Dropdown Elemen Select */
+.category-filter select {
+  background-color: #ff7a00; /* Oranye khas MOD-EM */
+  color: white;
+  border: none;
+  padding: 6px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
 }
 
-.search-box input{
-  padding:6px 10px;
-  border-radius:6px;
-  border:none;
-  font-size:14px;
-  outline:none;
-  width:200px;
-  min-width:120px; /* agar tidak terlalu kecil di HP */
+/* Kotak Input Search */
+.search-box input {
+  padding: 6px 12px;
+  border: 1px solid #444;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #333;
+  outline: none;
+  width: 100%;
+  max-width: 250px;          /* Membatasi panjang kotak search */
+}
+
+/* Efek saat kotak search diklik (fokus) */
+.search-box input:focus {
+  border-color: #ff7a00;     /* Border berubah oranye saat diklik */
 }
 .card-rating{
 margin:5px 0;
