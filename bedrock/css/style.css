@@ -146,6 +146,12 @@ border-radius: 10px;
   gap:10px;
   margin:20px 0;
   flex-wrap:nowrap; /* paksa tetap di satu baris */
+  
+  background-color: #1a1a1a; /* Warna kotak (bisa disesuaikan dengan tema webmu) */
+  border: 1px solid #333;    /* Garis tepi tipis agar berbentuk kotak */
+  border-radius: 8px;        /* Sudut kotak dibuat agak melengkung/halus */
+  padding: 12px 20px;        /* Jarak dalam kotak agar tidak mentok ke pinggir */
+  margin-bottom: 20px;       /* Jarak kotak ini dengan konten */
 }
 
 .category-filter label{
