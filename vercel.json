@@ -1,15 +1,8 @@
 {
   "cleanUrls": true,
-  "redirects": [
-    {
-      "source": "/bedrock/bedrock",
-      "destination": "/bedrock",
-      "permanent": true
-    }
-  ],
   "rewrites": [
     {
-      "source": "/bedrock",
+      "source": "/home",
       "destination": "/bedrock/bedrock.html"
     }
   ]
