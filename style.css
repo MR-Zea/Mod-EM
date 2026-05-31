@@ -66,3 +66,107 @@ cursor:pointer;
   width: 100px;
   height: 100px;
 }
+
+    .site-footer {
+        background-color: #1a1a1a; /* Warna gelap Slate 900, sangat elegan */
+        color: #94a3b8; /* Warna teks abu-abu terang Slate 400 */
+        padding: 24px 20px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        border-top: 1px solid #334155;
+        margin-top: 50px;
+    }
+
+    .footer-container {
+        max-width: 850px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .footer-left p {
+        font-size: 14px;
+        margin: 0;
+    }
+
+    .brand-name {
+        color: #ffffff;
+        font-weight: 600;
+    }
+
+    /* Tautan Dokumen */
+    .footer-links {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .footer-link {
+        color: #94a3b8;
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+
+    .footer-link:hover {
+        color: #38bdf8; /* Efek hover biru langit cerah */
+    }
+
+    .footer-separator {
+        color: #475569;
+        user-select: none;
+    }
+
+    /* Bagian Sosial Media */
+    .footer-socials {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .social-icon {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        transition: transform 0.2s ease, filter 0.2s ease;
+    }
+
+    .social-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        /* Mengubah gambar ikon hitam bawaan menjadi abu-abu terang agar serasi */
+        filter: invert(74%) sepia(21%) saturate(237%) hue-rotate(178%) brightness(88%) contrast(87%);
+    }
+
+    .social-icon:hover {
+        transform: translateY(-3px); /* Efek membal ke atas saat di-hover */
+    }
+
+    .social-icon:hover img {
+        /* Mengubah warna ikon menjadi putih terang saat di-hover */
+        filter: invert(100%) sepia(0%) saturate(7461%) hue-rotate(181%) brightness(119%) contrast(100%);
+    }
+
+    /* Optimasi Tampilan Mobile (HP) */
+    @media (max-width: 640px) {
+        .footer-container {
+            flex-direction: column;
+            text-align: center;
+            gap: 15px;
+        }
+
+        .footer-left {
+            order: 3; /* Menaruh copyright paling bawah di layar HP */
+        }
+
+        .footer-links {
+            order: 1;
+        }
+
+        .footer-socials {
+            order: 2;
+        }
+    }
