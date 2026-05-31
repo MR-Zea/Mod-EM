@@ -146,7 +146,7 @@ border-radius: 10px;
   gap: 15px;
   
   /* Efek Kotak */
-  background-color: #1a1a1a; /* Warna kotak (bisa disesuaikan dengan tema webmu) */
+  background-color: #2e2e2e; /* Warna kotak (bisa disesuaikan dengan tema webmu) */
   border: 1px solid #333;    /* Garis tepi tipis agar berbentuk kotak */
   border-radius: 8px;        /* Sudut kotak dibuat agak melengkung/halus */
   padding: 12px 20px;        /* Jarak dalam kotak agar tidak mentok ke pinggir */
