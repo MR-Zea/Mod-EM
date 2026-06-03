@@ -116,7 +116,7 @@ body {
 }
 
 .search-box input::placeholder {
-  color: #666;
+  color: white;
 }
 
 .search-box input:focus {
