@@ -5,12 +5,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  background: #0d0d0f; /* Background super dark agar efek glow lebih menyala */
-  color: #e2e8f0;
+  background: #1a1a1a; /* Warna latar belakang utama gelap sesuai gambar */
+  color: white;
   line-height: 1.6;
   display: flex;
   flex-direction: column;
@@ -24,110 +24,176 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(26, 26, 29, 0.8); /* Opacity pada header */
-  backdrop-filter: blur(12px); /* Efek blur kaca blur */
-  padding: 16px 24px;
-  border-bottom: 2px solid rgba(255, 122, 0, 0.4);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  background: #2a2a2a; /* Warna header abu-abu gelap */
+  padding: 12px 20px;
+  border-bottom: 3px solid #ff6a00; /* Garis oranye bawah header */
 }
 
 .site-title {
-  color: #ff7a00;
+  color: #ff6a00;
   font-size: 24px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  text-shadow: 0 0 10px rgba(255, 122, 0, 0.3);
+  font-weight: bold;
 }
 
 .logo {
-  width: 46px;
-  height: 46px;
-  border-radius: 12px;
-  object-fit: cover;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 50px;
+  height: 50px;
+  border-radius: 15%;
 }
 
 /* ==========================================================================
-   3. PLATFORM SELECTION LAYOUT (PREMIUM LOOK)
+   3. PLATFORM SELECTION LAYOUT
    ========================================================================== */
 .platform-select {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 32px;
-  margin: auto;
-  padding: 60px 20px;
+  gap: 40px; /* Jarak antar kartu */
+  margin: auto; /* Otomatis di tengah layar */
+  padding: 40px 20px;
   flex-grow: 1;
   width: 100%;
   max-width: 900px;
 }
 
 .platform-card {
-  background: rgba(30, 30, 35, 0.6); /* Menggunakan opacity ganda (Glassmorphism) */
-  backdrop-filter: blur(8px);
-  padding: 40px 30px;
-  border-radius: 24px; /* Sudut lengkungan lebih lembut & modern */
+  background: #2a2a2a; /* Warna box kartu sesuai gambar */
+  padding: 40px;
+  border-radius: 12px;
   text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.05); /* Border tipis transparan */
+  border-left: 10px solid #ff6600; /* Border kiri tebal warna oranye khas */
   color: white;
   width: 100%;
   max-width: 280px;
-  aspect-ratio: 1 / 1.15;
-  position: relative;
-  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1); /* Efek transisi halus premium */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Efek Hover Keren ala Platform Gaming Dashboard */
+/* Efek hover interaktif */
 .platform-card:hover {
-  transform: translateY(-8px);
-  background: rgba(35, 35, 40, 0.85);
-  border-color: rgba(255, 122, 0, 0.6);
-  box-shadow: 0 15px 35px rgba(255, 122, 0, 0.15), 
-              0 0 15px rgba(255, 122, 0, 0.05);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
 .platform-card span {
   font-size: 20px;
-  font-weight: 800;
-  margin-bottom: 14px;
-  color: #ffffff;
-  letter-spacing: 0.5px;
-  transition: color 0.3s;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
-.platform-card:hover span {
-  color: #ff7a00; /* Judul berubah oranye saat di-hover */
+.platform-card p {
+  font-size: 14px;
+  color: #aaaaaa; /* Warna abu-abu pudar untuk (coming soon) */
+  margin-top: 15px;
 }
 
-/* Teks Status (coming soon) */
-.platform-card p, 
-.platform-card text {
-  font-size: 13px;
-  color: #64748b; /* Warna abu-abu redup pas murni */
-  margin-top: 10px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-}
-
-/* Style Gambar Blok Minecraft di Dalam Kartu */
+/* Gambar blok Minecraft di dalam kartu */
 .img {
-  border-radius: 20px;
-  width: 96px;
-  height: 96px;
+  border-radius: 25%;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
-  filter: drop-shadow(0 8px 16px rgba(0,0,0,0.4)); /* Efek bayangan realistis pada 3D block */
-  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.platform-card:hover .img {
-  transform: scale(1.08) translateY(-4px) rotate(4deg); /* Efek membal & memutar estetik */
+/* ==========================================================================
+   4. SITE FOOTER
+   ========================================================================== */
+.site-footer {
+  background-color: #1a1a1a;
+  color: #94a3b8;
+  padding: 24px 20px;
+  border-top: 1px solid #334155;
+  margin-top: auto;
+}
+
+.footer-container {
+  max-width: 850px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-left p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.brand-name {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.footer-link {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #38bdf8;
+}
+
+.footer-separator {
+  color: #475569;
+  user-select: none;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-link i {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.footer-link:hover i.fa-discord {
+  color: #5865F2; /* Warna asli logo Discord saat di-hover */
+}
+
+.footer-link:hover i.fa-youtube {
+  color: #FF0000; /* Warna asli logo Youtube saat di-hover */
+}
+
+/* ==========================================================================
+   5. RESPONSIVE MEDIA QUERIES (OPTIMASI HP)
+   ========================================================================== */
+@media (max-width: 640px) {
+  .platform-select {
+    flex-direction: column; /* Kartu menumpuk vertikal ke bawah di layar HP */
+    gap: 20px;
+    margin-top: 50px;
+  }
+
+  .platform-card {
+    max-width: 100%; /* Lebar kartu menyesuaikan screen HP secara aman */
+    padding: 30px 20px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .footer-left { order: 3; }
+  .footer-links { order: 1; justify-content: center; }
+  .footer-socials { order: 2; justify-content: center; }
+}
 }
 
 /* ==========================================================================
