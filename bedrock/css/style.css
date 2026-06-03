@@ -1,135 +1,450 @@
-/* RESET */
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
-body{
-  background: #1a1a1a;
+/* ==========================================================================
+   1. RESET & BASE STYLES
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: #121212; /* Sedikit lebih gelap agar kontras kartu lebih hidup */
+  color: #e2e8f0;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   2. HEADER & NAVIGATION
+   ========================================================================== */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e1e1e;
+  padding: 16px 24px;
+  border-bottom: 3px solid #ff7a00;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.site-title {
+  color: #ff7a00;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.back {
+  background: #ff7a00;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.back:hover {
+  background: #e06b00;
+  transform: translateX(-2px);
+}
+
+/* ==========================================================================
+   3. FILTER & SEARCH BOX
+   ========================================================================== */
+.filter-search {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  background-color: #1e1e1e;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 16px 24px;
+  margin: 20px;
+}
+
+.category-filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.category-filter select {
+  background-color: #ff7a00;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.2s;
+}
+
+.category-filter select:hover {
+  background-color: #e06b00;
+}
+
+.search-box {
+  flex-grow: 1;
+  max-width: 300px;
+}
+
+.search-box input {
+  padding: 8px 16px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background-color: #2a2a2a; /* Mengubah search box jadi gelap agar matching */
+  color: #ffffff;
+  outline: none;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.search-box input::placeholder {
+  color: #666;
+}
+
+.search-box input:focus {
+  border-color: #ff7a00;
+  background-color: #333;
+  box-shadow: 0 0 0 2px rgba(255, 122, 0, 0.2);
+}
+
+/* ==========================================================================
+   4. ADDON GRID & CARDS (BAGIAN UTAMA)
+   ========================================================================== */
+.addon-wrapper {
+  padding: 0 20px 20px 20px;
+}
+
+.addon-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: #1e1e1e;
+  color: white;
+  border: 1px solid #2a2a2a; /* Mengganti border kiri tebal dengan border tipis elegan */
+  padding: 20px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Efek Glow & Naik saat Kartu di-Hover */
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #ff7a00;
+  box-shadow: 0 10px 25px rgba(255, 122, 0, 0.15);
+}
+
+.card-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  object-fit: cover;
+}
+
+/* Membuat Layout Konten Vertikal Konsisten */
+.card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.card-desc {
+  font-size: 13px;
+  color: #94a3b8;
+  margin-bottom: 15px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Membatasi teks deskripsi max 3 baris agar tinggi kartu seragam */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-screen {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: auto; /* Mendorong screenshot ke area bawah */
+  margin-bottom: 12px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.card-rating {
+  margin: 8px 0;
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+}
+
+.star {
+  width: 14px;
+  height: 14px;
+}
+
+/* Desain Tombol Open / Download */
+button, .btn-download {
+  cursor: pointer;
+  background: #ff7a00;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  width: 100%; /* Tombol melebar penuh agar lebih mudah diklik di HP/Desktop */
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+button:hover, .btn-download:hover {
+  background: #e06b00;
+}
+
+button:active, .btn-download:active {
+  transform: scale(0.98);
+}
+
+/* ==========================================================================
+   5. RESPONSIVE BREAKPOINTS (MEDIA QUERIES)
+   ========================================================================== */
+@media(max-width: 1400px) {
+  .addon-container { grid-template-columns: repeat(4, 1fr); }
+}
+
+@media(max-width: 1024px) {
+  .addon-container { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media(max-width: 768px) {
+  .addon-container { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .filter-search { margin: 15px; padding: 12px; }
+  .search-box { max-width: 100%; }
+}
+
+@media(max-width: 480px) {
+  .addon-container { grid-template-columns: repeat(1, 1fr); }
+  .main-header { padding: 12px 16px; }
+  .site-title { font-size: 20px; }
+}
+
+/* ==========================================================================
+   6. MODAL STYLES
+   ========================================================================== */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(4px); /* Efek blur estetik pada background modal */
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #1e1e1e;
+  color: white;
+  margin: 40px auto;
+  padding: 24px;
+  width: 90%;
+  max-width: 600px;
+  border-radius: 16px;
+  border: 1px solid #2a2a2a;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+}
+
+.modal-screenshot {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 12px; right: 18px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #94a3b8;
+  transition: color 0.2s;
+}
+
+.close:hover {
   color: white;
 }
-.main-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:#2a2a2a;
-padding:12px 20px;
-border-bottom:3px solid #ff6a00;
+
+textarea, input {
+  width: 100%;
+  padding: 10px 14px;
+  margin: 6px 0;
+  border: 1px solid #333;
+  background: #2a2a2a;
+  color: white;
+  border-radius: 8px;
+  resize: vertical;
+  outline: none;
 }
 
-.site-title{
-color:#ff6a00;
+textarea:focus, input:focus {
+  border-color: #ff7a00;
 }
 
-.logo{
-width:50px;
-height:50px;
-border-radius: 15%;
+/* ==========================================================================
+   7. REVIEWS SECTION
+   ========================================================================== */
+#reviewListWrapper {
+  max-height: 250px;
+  overflow-y: auto;
+  margin-top: 10px;
 }
 
-/* Wrapper dengan scroll vertikal jika tinggi terbatas */
-.addon-wrapper{
-  padding:10px;
+.review {
+  border-bottom: 1px solid #2a2a2a;
+  padding: 12px 0;
 }
 
-.addon-container{
-  display:grid;
-  grid-template-columns:repeat(5, 1fr);
-  gap:18px;
+.review-name { font-weight: bold; color: #fff; }
+.review-stars { color: #ff7a00; }
+.reply { margin-left: 20px; font-size: 14px; color: #94a3b8; }
+
+.review button {
+  margin-right: 5px;
+  margin-top: 5px;
+  background: transparent;
+  color: #94a3b8;
+  border: none;
+  padding: 4px 8px;
+  width: auto;
+  font-size: 12px;
 }
 
-@media(max-width:1200px){
-  .addon-container{
-    grid-template-columns:repeat(4, 1fr);
-  }
+.review button:hover {
+  color: white;
+  background: #2a2a2a;
 }
 
-@media(max-width:900px){
-  .addon-container{
-    grid-template-columns:repeat(3, 1fr);
-  }
+/* ==========================================================================
+   8. FOOTER STYLES
+   ========================================================================== */
+.site-footer {
+  background-color: #121212;
+  color: #94a3b8;
+  padding: 32px 20px;
+  border-top: 1px solid #2a2a2a;
+  margin-top: 60px;
 }
 
-@media(max-width:600px){
-  .addon-container{
-    grid-template-columns:repeat(2, 1fr);
-  }
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-@media(max-width:400px){
-  .addon-container{
-    grid-template-columns:repeat(1, 1fr);
-  }
+.footer-left p {
+  font-size: 14px;
+  margin: 0;
 }
 
-  .card{
-    background: #2a2a2a;
-    color: white;
-    border-left:10px solid #ff6600;
-    padding:15px;
-    border-radius: 15px;
-    display: flex;
+.brand-name {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 14px;
+}
+
+.footer-link {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #ff7a00; /* Diubah ke oranye agar senada dengan tema utama */
+}
+
+.footer-separator {
+  color: #334155;
+  user-select: none;
+}
+
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.social-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s ease;
+}
+
+.social-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: invert(74%) sepia(21%) saturate(237%) hue-rotate(178%) brightness(88%) contrast(87%);
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+}
+
+.social-icon:hover img {
+  filter: invert(61%) sepia(85%) saturate(2443%) hue-rotate(13deg) brightness(101%) contrast(105%); /* Efek oranye ketika di-hover */
+}
+
+@media (max-width: 640px) {
+  .footer-container {
     flex-direction: column;
-    align-items: center;
+    text-align: center;
+    gap: 20px;
   }
-
-  .card-logo{
-    width:80px;
-    height:80px;
-    border-radius: 8px;
-  }
-
-  .card-desc{
-    font-size:15px;
-  }
+  .footer-left { order: 3; }
+  .footer-links { order: 1; justify-content: center; }
+  .footer-socials { order: 2; justify-content: center; }
 }
-
-.card:hover{
-  transform:scale(1.03);
-}
-
-
-.card-screen{
-  width:100%;
-  border-radius:8px;
-  margin-top:5px;
-}
-
-button,.btn-download{cursor:pointer;background:#f97316;color:white;border:none;padding:10px 25px;border-radius:5px;transition:background 0.2s;text-decoration:none;}
-button:hover,.btn-download:hover{background:#ea580c;}
-
-/* MODAL */
-.modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);overflow-y:auto;z-index:1000;}
-.modal-content{
-  background:#2a2a2a;
-  color: white;
-  margin:40px auto;
-  padding:20px;
-  width:90%;
-  max-width:600px;
-  border-radius:10px;
-  max-height:90vh;
-  overflow-y:auto;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
-  position:relative;
-}
-.modal-screenshot{width:100%;border-radius:5px;margin-bottom:10px;}
-.close{position:absolute;top:10px;right:15px;font-size:28px;font-weight:bold;cursor:pointer;color:white;}
-textarea,input{width:100%;padding:8px;margin:5px 0;border:1px solid #ccc;border-radius:5px;resize:vertical;}
-
-/* REVIEW */
-#reviewListWrapper{max-height:250px;overflow-y:auto;margin-top:10px;}
-.review{border-bottom:1px solid #ddd;padding:10px 0;}
-.review-name{font-weight:bold;}
-.review-stars{color:orange;}
-.reply{margin-left:20px;font-size:14px;color:#444;}
-.review button{margin-right:5px;margin-top:5px;background: #6b6b6b00 ;color:#d1d1d1;border:none;padding:3px 8px;border-radius:5px;cursor:pointer;}
-
-/* RESPONSIVE */
-@media(max-width:600px){
-  .card{flex:0 0 100%;}
-  .modal-content{width:95%;margin:20px auto;}
-}
-
-.back{
 background:#ff7a00;
 color:white;
 border:none;
