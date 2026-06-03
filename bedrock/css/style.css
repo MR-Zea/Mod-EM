@@ -46,11 +46,11 @@ body {
   background: #ff7a00;
   color: white;
   border: none;
-  width: 78px;
-  height:50px;
+  width: 75px;
+  height:45px;
   cursor: pointer;
   border-radius: 8px;
-  font-weight: 600;
+  font-weight: 450;
   transition: all 0.2s ease;
 }
 
