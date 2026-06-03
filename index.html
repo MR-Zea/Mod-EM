@@ -1,66 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 
 <head>
+    <meta charset="UTF-8">
+    <title>Mod-Em</title>
 
-<title>Mod-Em</title>
-
-<link rel="stylesheet" href="style.css">
-<link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-<meta name="description" content="Download Add-on/Mod Free"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
- 
-<meta property="og:title" content="Mod-Em"/>
-<meta property="og:description" content="Minecraft Mod & Addons"/>
-<meta property="og:image" content="https://mod-em.vercel.app/logo.png"/>
-<meta property="og:url" content="https://mod-em.vercel.app"/>
-<meta property="og:type" content="website"/>
-<meta property="og:site_name" content="mod-em.vercel.app"/>
+    <meta name="description" content="Download Add-on/Mod Free"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+     
+    <meta property="og:title" content="Mod-Em"/>
+    <meta property="og:description" content="Minecraft Mod & Addons"/>
+    <meta property="og:image" content="https://mod-em.vercel.app/logo.png"/>
+    <meta property="og:url" content="https://mod-em.vercel.app"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="mod-em.vercel.app"/>
 </head>
 
-<body class="dark">
+<body>
 
-<header class="main-header">
-
-<div>
-  <a href="https://mod-em.vercel.app/">
-<img src="logo.png" class="logo">
-  </a>
-<h1 class="site-title">MOD-EM</h1>
-</div>
-</header>
-
-<div class="platform-select">
-
-<a href="#" class="platform-card">
-<h2>Java Edition</h2>
-<img class="img" src="https://media.forgecdn.net/avatars/1070/13/638605220544214742.webp">
-<h2>(comming soon)</h2>
-</a>
-
-<a href="bedrock/home.html" class="platform-card">
-<h2>Bedrock Edition</h2>
-<img class="img" src="https://media.forgecdn.net/avatars/652/316/638053973637065420.png">
-</a>
-</div>
-
-<script src="script.js"></script>
-
-    <footer class="bg-[#1a1a1a] text-center py-8 text-xs text-slate-500 border-t border-neutral-800">
-        <div class="flex justify-center gap-4 mb-3 text-slate-400">
-            <a href="https://mod-em.vercel.app/Terms-Of-Use" class="hover:text-white transition-colors">Terms of Use</a>
-            <span>•</span>
-            <a href="https://mod-em.vercel.app/Privacy-Policy" class="hover:text-white transition-colors">Privacy Policy</a>
+    <header class="main-header">
+        <div style="display: flex; align-items: center; gap: 12px;">
+            <a href="https://mod-em.vercel.app/">
+                <img src="logo.png" class="logo" alt="Logo MOD-EM">
+            </a>
+            <h1 class="site-title">MOD-EM</h1>
         </div>
-        <div class="flex justify-center gap-4 text-lg mb-4">
-            <a href="https://discord.com/invite/rCtkSA3Jet" class="text-slate-400 hover:text-white transition-colors"><i class="fa-brands fa-discord"></i></a>
-            <a href="https://www.youtube.com/@Zea_LoTT" class="text-slate-400 hover:text-red-500 transition-colors"><i class="fa-brands fa-youtube"></i></a>
+    </header>
+
+    <div class="platform-select">
+        <a href="#" class="platform-card">
+            <span>Java Edition</span>
+            <img class="img" src="https://media.forgecdn.net/avatars/1070/13/638605220544214742.webp" alt="Java Block">
+            <p>(coming soon)</p>
+        </a>
+
+        <a href="bedrock/home.html" class="platform-card">
+            <span>Bedrock Edition</span>
+            <img class="img" src="https://media.forgecdn.net/avatars/652/316/638053973637065420.png" alt="Bedrock Block">
+        </a>
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>&copy; 2026 <span class="brand-name">ZeaLoTT250</span>. All rights reserved.</p>
+            </div>
+            
+            <div class="footer-links">
+                <a href="https://mod-em.vercel.app/Terms-Of-Use" class="footer-link">Terms of Use</a>
+                <span class="footer-separator">•</span>
+                <a href="https://mod-em.vercel.app/Privacy-Policy" class="footer-link">Privacy Policy</a>
+            </div>
+            
+            <div class="footer-socials">
+                <a href="https://discord.com/invite/rCtkSA3Jet" class="footer-link" target="_blank" style="font-size: 20px;">
+                    <i class="fa-brands fa-discord"></i>
+                </a>
+                <a href="https://www.youtube.com/@Zea_LoTT" class="footer-link" target="_blank" style="font-size: 20px; transition: color 0.2s;">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
         </div>
-        <p>&copy; 2026 <span class="text-slate-300 font-semibold">ZeaLoTT250</span>. All rights reserved.</p>
     </footer>
-</body>
 
+    <script src="script.js"></script>
+</body>
 </html>
