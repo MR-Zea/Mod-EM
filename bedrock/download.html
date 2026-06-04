@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
 
@@ -10,6 +10,28 @@
 <link rel="stylesheet" href="css/download.css">
  <link rel="icon" type="image/png" href="logo.png">
   
+ <script src="https://google.com/recaptcha/api.js" async defer></script>
+
+ <style>
+   /* Custom styles for reCAPTCHA container and error text */
+   .recaptcha-container {
+       margin: 20px 0;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+   }
+   .recaptcha-error {
+       color: #ff4d4d;
+       font-size: 14px;
+       margin-top: 8px;
+       display: none; /* Hidden by default */
+       font-weight: bold;
+   }
+   /* Changes the div cursor to pointer to mimic a real link */
+   .download-btn {
+       cursor: pointer;
+   }
+ </style>
 </head>
 
 <body>
@@ -18,7 +40,7 @@
 
 <div>
 <a href="https://mod-em.vercel.app">
-<img src="logo.png" class="logo">
+<img src="logo.png" class="logo" alt="Logo">
 </a>
 <h1 class="site-title">MOD-EM</h1>
 </div>
@@ -28,18 +50,23 @@
 
 <div class="addon-box">
 
-<img id="addonLogo" class="addon-logo">
+<img id="addonLogo" class="addon-logo" alt="Addon Logo">
   
 <div id="addonRating"></div>
 
 
 <h1 id="addonName"></h1>
 
-<img id="addonScreenshot" class="addon-screen">
+<img id="addonScreenshot" class="addon-screen" alt="Addon Screenshot">
 
 <p id="addonDesc"></p>
 
-<a id="downloadBtn" class="download-btn" target="_blank">Download</a>
+<div class="recaptcha-container">
+    <div class="g-recaptcha" data-sitekey="KUNCI_SITUS_KAMU"></div>
+    <div id="recaptchaError" class="recaptcha-error">Please check the reCAPTCHA box first!</div>
+</div>
+
+<div id="downloadBtn" class="download-btn">Download</div>
 
 <div class="rating-info">
 
@@ -50,10 +77,9 @@
 <div class="review-box">
 
 <div id="reviewSection">
-  <p>Ingin memberi review atau feedback? Gabung Discord kami:</p>
+  <p>Want to leave a review or feedback? Join our Discord:</p>
   
-  <!-- Discord widget -->
-<iframe src="https://discord.com/widget?id=1454827515901120707&theme=dark" width="500" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+  <iframe src="https://discord.com/widget?id=1454827515901120707&theme=dark" width="500" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 </div>
 
 </div>
@@ -62,26 +88,22 @@
 
   <div id="imgModal" class="imgModal">
   <span id="closeImg">&times;</span>
-  <img id="imgShow">
+  <img id="imgShow" alt="Preview">
 </div>
 
  <footer class="site-footer">
     <div class="footer-container">
-        <!-- Bagian Kiri: Hak Cipta & Brand -->
         <div class="footer-left">
             <p>&copy; 2026 <span class="brand-name">ZeaLoTT250</span>. All rights reserved.</p>
         </div>
 
-        <!-- Bagian Tengah: Tautan Dokumen Legal -->
         <div class="footer-links">
             <a href="https://mod-em.vercel.app/Terms-Of-Use" class="footer-link">Terms of Use</a>
             <span class="footer-separator">&bull;</span>
             <a href="https://mod-em.vercel.app/Privacy-Policy" class="footer-link">Privacy Policy</a>
         </div>
 
-        <!-- Bagian Kanan: Ikon Sosial Media -->
         <div class="footer-socials">
-            <!-- Ganti src dengan file .jpg / .png ikon sosial media Anda jika ada -->
             <a href="https://discord.gg/rCtkSA3Jet" target="_blank" aria-label="Discord" class="social-icon">
                 <img src="https://cdn-icons-png.flaticon.com/512/5968/5968759.png" alt="Discord">
             </a>
@@ -93,6 +115,31 @@
  </footer>
 
 <script src="js/download.js"></script>
+
+<script>
+    document.getElementById('downloadBtn').addEventListener('click', function(e) {
+        const errorText = document.getElementById('recaptchaError');
+        const response = grecaptcha.getResponse();
+
+        if (response === "") {
+            // If not verified, prevent action and display the English error message
+            errorText.style.display = "block";
+        } else {
+            // If verified, hide error
+            errorText.style.display = "none";
+
+            // Dynamically fetches the download URL injected by your js/download.js
+            const downloadUrl = this.getAttribute('href') || window.currentDownloadUrl; 
+
+            if (downloadUrl) {
+                window.open(downloadUrl, '_blank');
+            } else {
+                // English fallback log if downloadUrl is missing
+                console.log("Download link not found. Please ensure download.js provides the link.");
+            }
+        }
+    });
+</script>
 
 </body>
 </html>
