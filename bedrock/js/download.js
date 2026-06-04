@@ -9,7 +9,7 @@ fetch("addons.json")
   const params = new URLSearchParams(window.location.search)
   const addonName = params.get("name")
   if(!addonName){
-    document.body.innerHTML = "Addon tidak ditemukan"
+    document.body.innerHTML = "Addon not found" // Changed to English
     return
   }
 
@@ -17,7 +17,7 @@ fetch("addons.json")
   currentAddon = data.find(a => a.name === addonName)
 
   if(!currentAddon){
-    document.body.innerHTML = "Addon tidak ditemukan"
+    document.body.innerHTML = "Addon not found" // Changed to English
     return
   }
 
@@ -27,7 +27,11 @@ fetch("addons.json")
   document.getElementById("addonDesc").innerText = currentAddon.fullDescription
   document.getElementById("addonScreenshot").src = currentAddon.screenshot
   document.getElementById("addonLogo").src = currentAddon.logo
-  document.getElementById("downloadBtn").href = currentAddon.file
+  
+  // --- PERUBAHAN DI SINI ---
+  // Menggunakan setAttribute agar link download tersimpan di dalam tag <div>
+  document.getElementById("downloadBtn").setAttribute("href", currentAddon.file);
+  
   document.getElementById("addonRating").innerText = currentAddon.rating
   
 let rating = parseFloat(currentAddon.rating) || 0
