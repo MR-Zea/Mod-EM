@@ -30,7 +30,7 @@ fetch("addons.json")
   
   // --- PERUBAHAN DI SINI ---
   // Menggunakan setAttribute agar link download tersimpan di dalam tag <div>
-  document.getElementById("downloadBtn").setAttribute("href", currentAddon.file);
+window.currentDownloadUrl = currentAddon.file;
   
   document.getElementById("addonRating").innerText = currentAddon.rating
   
