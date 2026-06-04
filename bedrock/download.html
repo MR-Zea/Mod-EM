@@ -116,30 +116,6 @@
 
 <script src="js/download.js"></script>
 
-<script>
-    document.getElementById('downloadBtn').addEventListener('click', function(e) {
-        const errorText = document.getElementById('recaptchaError');
-        const response = grecaptcha.getResponse();
-
-        if (response === "") {
-            // If not verified, prevent action and display the English error message
-            errorText.style.display = "block";
-        } else {
-            // If verified, hide error
-            errorText.style.display = "none";
-
-            // Dynamically fetches the download URL injected by your js/download.js
-            const downloadUrl = this.getAttribute('href') || window.currentDownloadUrl; 
-
-            if (downloadUrl) {
-                window.open(downloadUrl, '_blank');
-            } else {
-                // English fallback log if downloadUrl is missing
-                console.log("Download link not found. Please ensure download.js provides the link.");
-            }
-        }
-    });
-</script>
 
 </body>
 </html>
