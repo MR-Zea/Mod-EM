@@ -117,28 +117,28 @@
 <script src="js/download.js"></script>
 
 <script>
-     document.getElementById('downloadBtn').addEventListener('click', function(e) {
+    document.getElementById('downloadBtn').addEventListener('click', function(e) {
         const errorText = document.getElementById('recaptchaError');
         const response = grecaptcha.getResponse();
 
         if (response === "") {
-            // Jika belum dicentang, munculkan teks error
+            // Jika belum dicentang, kunci tombol dan tampilkan error
             errorText.style.display = "block";
         } else {
-            // Jika sukses, sembunyikan error dan buka link
             errorText.style.display = "none";
 
-            // Mengambil link yang disuntikkan oleh download.js via setAttribute
-            const downloadUrl = this.getAttribute('href'); 
+            // Mengambil langsung dari variabel global yang dibuat download.js
+            const downloadUrl = window.currentDownloadUrl; 
 
             if (downloadUrl) {
                 window.open(downloadUrl, '_blank');
             } else {
-                console.log("Download link not found in href attribute.");
+                console.log("Download link not found.");
             }
         }
     });
 </script>
+
 
 
 </body>
