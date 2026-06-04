@@ -122,16 +122,32 @@
         const response = grecaptcha.getResponse();
 
         if (response === "") {
-            // Jika belum dicentang, kunci tombol dan tampilkan error
+            // Jika belum diverifikasi, tampilkan error
             errorText.style.display = "block";
         } else {
             errorText.style.display = "none";
 
-            // Mengambil langsung dari variabel global yang dibuat download.js
-            const downloadUrl = window.currentDownloadUrl; 
+            // Mengambil URL download (bisa dari atribut href atau variabel global)
+            const downloadUrl = this.getAttribute('href') || window.currentDownloadUrl; 
 
             if (downloadUrl) {
-                window.open(downloadUrl, '_blank');
+                // --- TRIK AGAR LANGSUNG DOWNLOAD TANPA PINDAH HALAMAN ---
+                const hiddenAnchor = document.createElement('a');
+                hiddenAnchor.href = downloadUrl;
+                
+                // Atribut ini memaksa browser untuk mengunduh, bukan membuka halaman baru
+                hiddenAnchor.setAttribute('download', ''); 
+                
+                // Sembunyikan elemen agar tidak merusak tampilan
+                hiddenAnchor.style.display = 'none'; 
+                
+                // Masukkan ke dokumen, picu klik, lalu hapus lagi
+                document.body.appendChild(hiddenAnchor);
+                hiddenAnchor.click();
+                document.body.removeChild(hiddenAnchor);
+                
+                // Opsional: Reset reCAPTCHA agar user harus verifikasi lagi jika ingin klik kedua kali
+                // grecaptcha.reset();
             } else {
                 console.log("Download link not found.");
             }
