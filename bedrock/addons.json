@@ -1,4 +1,14 @@
 [
+    {
+    "name": "UTILITIESAdd-On",
+    "category": "addon",
+    "folder": "UTILITIES_Add-On",
+    "file": "https://archive.org/download/utilities-add-on-addon/UTILITIES%20Add-On%20%28addon%29.mcaddon",
+    "logo": "addons/UTILITIES_Add-On/logo.png",
+    "screenshot": "addons/UTILITIES_Add-On/thumbnail.png",
+    "description": ​"Love utility Add-Ons? Craft tons of helpful tools like item sorters, tree choppers, lava boats, and more on your world! Fully compatible with other Add-Ons.",
+    "fullDescription": "Love utility Add-Ons? In this pack we add T.O.N.S of them as craftable tools on YOUR WORLD! Craft tons of tools to help you on your world and is compatible with other Add-Ons!\n-- Includes --\n- Item sorter\n- Tree chopper\n- Waypoint adder\n- Portable camp\n- Lava boat\n- XP container\n+ AND MANY MORE!",
+    "rating": 4
   {
     "name": "Essentials",
     "category": "addon",
