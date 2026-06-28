@@ -1,5 +1,16 @@
 [
 {
+  "name": "Village Cities Add-On",
+  "category": "addon",
+  "folder": "Village_Cities_Add-On",
+  "file": "https://archive.org/download/village-cities-add-on-addon/Village%20Cities%20Add-On%20%28addon%29.mcaddon",
+  "logo": "addons/Village_Cities_Add-On/logo.png",
+  "screenshot": "addons/Village_Cities_Add-On/thumbnail.png",
+  "description": "Discover huge Village Cities across the overworld. Purchase one and grow it into a thriving metropolis. Build your Village City empire.",
+  "fullDescription": "Discover huge Village Cities across the overworld. Purchase one and grow it into a thriving metropolis.\n\n- Own entire cities\n- Construct skyscrapers, shops and factories\n- Trade with 19 new villagers\n- Earn bank interest\n- Restore derelict buildings and upgrade your city\n- Defend against zombie invasions\n- Travel between cities by train\n\nBuild your Village City empire.",
+  "rating": 4
+},
+{
   "name": "UTILITIES Add-On",
   "category": "addon",
   "folder": "UTILITIES_Add-On",
