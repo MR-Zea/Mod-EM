@@ -1,2 +1,2 @@
 # Mod-EM
-place to download minecraft mods
+Minecraft Mods & Add-Ons
