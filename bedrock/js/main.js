@@ -11,18 +11,23 @@ renderAddons()
 
 
 function renderAddons(){
+  let container=document.getElementById("addons")
+  container.innerHTML=""
 
-let container=document.getElementById("addons")
+  addons.forEach((a,i)=>{
+    let badge = "";
+    if (a.status === "new") {
+      badge = `<span class="badge badge-new">New</span>`;
+    } else if (a.status === "update") {
+      badge = `<span class="badge badge-update">Update</span>`;
+    }
 
-container.innerHTML=""
+    let card=document.createElement("div")
+    card.className="card"
 
-addons.forEach((a,i)=>{
-
-let card=document.createElement("div")
-card.className="card"
-
-card.innerHTML=`
-
+    // ${badge} ditaruh di paling atas struktur card
+    card.innerHTML=`
+      ${badge}
       <h3>${a.name}</h3>
       <img src="${a.logo}" class="card-logo">
       <p class="card-desc">${a.description}</p>
@@ -33,16 +38,62 @@ card.innerHTML=`
       </a>
       <br>
       <div class="card-rating">
-${generateStars(a.rating)}
-</div>
-
-`
-
-container.appendChild(card)
-
-})
-
+        ${generateStars(a.rating)}
+      </div>
+    `
+    container.appendChild(card)
+  })
 }
+
+function filterAddons(){
+  let category = document.getElementById("categorySelect").value
+  let search = document.getElementById("searchInput").value.trim().toLowerCase()
+
+  let container = document.getElementById("addons")
+  container.innerHTML=""
+
+  let filtered = addons
+
+  if(category !== "all"){
+    filtered = filtered.filter(a => a.category.toLowerCase() === category.toLowerCase())
+  }
+
+  if(search){
+    filtered = filtered.filter(a => a.name.toLowerCase().includes(search))
+  }
+
+  filtered.forEach((a,i)=>{
+    let badge = "";
+    if (a.status === "new") {
+      badge = `<span class="badge badge-new">New</span>`;
+    } else if (a.status === "update") {
+      badge = `<span class="badge badge-update">Update</span>`;
+    }
+
+    let card=document.createElement("div")
+    card.className="card"
+
+    // ${badge} ditaruh di paling atas struktur card
+    card.innerHTML=`
+      ${badge}
+      <h3>${a.name}</h3>
+      <img src="${a.logo}" class="card-logo">
+      <p class="card-desc">${a.description}</p>
+      <img src="${a.screenshot}" class="card-screen">
+      <br>
+      <a href="download.html?name=${a.name}" class="btn-download">
+      Open
+      </a>
+      <br>
+      <div class="card-rating">
+        ${generateStars(a.rating)}
+      </div>
+    `
+    container.appendChild(card)
+  })
+}
+
+
 
 
 
@@ -270,45 +321,6 @@ loadReviews()
 
 }
 
-function filterAddons(){
-  let category = document.getElementById("categorySelect").value
-  let search = document.getElementById("searchInput").value.trim().toLowerCase()
-
-  let container = document.getElementById("addons")
-  container.innerHTML=""
-
-  let filtered = addons
-
-  if(category !== "all"){
-    filtered = filtered.filter(a => a.category.toLowerCase() === category.toLowerCase())
-  }
-
-  if(search){
-    filtered = filtered.filter(a => a.name.toLowerCase().includes(search))
-  }
-
-  filtered.forEach((a,i)=>{
-    let card=document.createElement("div")
-    card.className="card"
-
-    card.innerHTML=`
-     <h3>${a.name}</h3>
-      <img src="${a.logo}" class="card-logo">
-      <p class="card-desc">${a.description}</p>
-      <img src="${a.screenshot}" class="card-screen">
-      <br>
-      <a href="download.html?name=${a.name}" class="btn-download">
-      Open
-      </a>
-      <br>
-      <div class="card-rating">
-${generateStars(a.rating)}
-</div>
-
-    `
-    container.appendChild(card)
-  })
-}
 
 function generateStars(rating){
 
@@ -337,6 +349,3 @@ return html
 
 }
 
-function goBack(){
-window.location.href = "https://mod-em.vercel.app/";
-}
