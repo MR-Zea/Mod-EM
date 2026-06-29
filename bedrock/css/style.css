@@ -153,6 +153,7 @@ body {
   color: white;
   border: 1px solid #2a2a2a; /* Mengganti border kiri tebal dengan border tipis elegan */
   position: relative;
+  padding-top: 40px;
   padding: 20px;
   border-radius: 16px;
   display: flex;
@@ -466,32 +467,31 @@ textarea:focus, input:focus {
   .footer-socials { order: 2; justify-content: center; }
 }
 
-/* Styling dasar untuk label di pojok card */
 .badge {
   position: absolute;
-  top: 12px;         /* Jarak dari atas card */
-  right: 12px;       /* Jarak dari kanan card (bisa diganti 'left' kalau mau di kiri) */
-  font-size: 11px;
-  padding: 4px 8px;
+  top: 15px;         /* Jarak aman dari atas batas card */
+  right: 15px;       /* Jarak aman dari kanan batas card */
+  font-size: 10px;   /* Sedikit diperkecil agar lebih proporsional */
+  padding: 4px 10px; /* Diperlebar sedikit agar teks bernapas */
   border-radius: 5px;
   font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  z-index: 10;       /* Supaya posisinya selalu di atas gambar/elemen lain */
+  letter-spacing: 0.8px;
+  z-index: 10;
 }
 
 /* Label jika status NEW (Hijau Transparan + Glowing) */
 .badge-new {
-  background-color: rgba(40, 167, 69, 0.25);
+  background-color: rgba(40, 167, 69, 0.2);
   color: #2bef6c;
   border: 1px solid rgba(40, 167, 69, 0.4);
-  box-shadow: 0 0 10px rgba(43, 239, 108, 0.5);
+  box-shadow: 0 0 12px rgba(43, 239, 108, 0.4);
 }
 
 /* Label jika status UPDATE (Oranye Transparan + Glowing) */
 .badge-update {
-  background-color: rgba(255, 140, 0, 0.25);
+  background-color: rgba(255, 140, 0, 0.2);
   color: #ffaa44;
   border: 1px solid rgba(255, 140, 0, 0.4);
-  box-shadow: 0 0 10px rgba(255, 170, 68, 0.5);
+  box-shadow: 0 0 12px rgba(255, 170, 68, 0.4);
    }
