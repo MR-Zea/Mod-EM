@@ -1,38 +1,41 @@
 [
-{
+  {
     "name": "Action And Stuff 1.11",
     "category": "texture",
     "folder": "ActionsStuff1.11",
-    "file":"https://archive.org/download/actions-stuff-1.11-resources/Actions%20Stuff%201.11%20%28resources%29.mcpack",
-    "logo":"addons/ActionsStuff1.11/logo.png",
-    "screenshot":"addons/ActionsStuff1.11/thumbnail.png",
-    "description":"Enhances Minecraft with new player and mob animations, 3D item models, custom armour, and vibrant visual improvements.",
+    "file": "https://archive.org/download/actions-stuff-1.11-resources/Actions%20Stuff%201.11%20%28resources%29.mcpack",
+    "logo": "addons/ActionsStuff1.11/logo.png",
+    "screenshot": "addons/ActionsStuff1.11/thumbnail.png",
+    "description": "Enhances Minecraft with new player and mob animations, 3D item models, custom armour, and vibrant visual improvements.",
     "fullDescription": "The Animation Pack You Didn't Know You Needed: Bring your world to life with new animations, particles, textures, and more!\n\n• Player Animations (1st & 3rd Person)\n• New & Improved Mob Animations\n• 3D Item Models\n• Custom Armour\n• A Complete & Faithful Texture Overhaul\n• Compatible with Vanilla Textures or Your Own Texture Packs\n• Now with 100% More Vibrant Visuals",
-    "rating": 5
-},
-{
-  "name": "Village Cities Add-On",
-  "category": "addon",
-  "folder": "Village_Cities_Add-On",
-  "file": "https://archive.org/download/village-cities-add-on-addon/Village%20Cities%20Add-On%20%28addon%29.mcaddon",
-  "logo": "addons/Village_Cities_Add-On/logo.png",
-  "screenshot": "addons/Village_Cities_Add-On/thumbnail.png",
-  "description": "Discover huge Village Cities across the overworld. Purchase one and grow it into a thriving metropolis. Build your Village City empire.",
-  "fullDescription": "Discover huge Village Cities across the overworld. Purchase one and grow it into a thriving metropolis.\n\n- Own entire cities\n- Construct skyscrapers, shops and factories\n- Trade with 19 new villagers\n- Earn bank interest\n- Restore derelict buildings and upgrade your city\n- Defend against zombie invasions\n- Travel between cities by train\n\nBuild your Village City empire.",
-  "rating": 4
-},
-{
-  "name": "UTILITIES Add-On",
-  "category": "addon",
-  "folder": "UTILITIES_Add-On",
-  "file": "https://archive.org/download/utilities-add-on-addon/UTILITIES%20Add-On%20%28addon%29.mcaddon",
-  "logo": "addons/UTILITIES_Add-On/logo.png",
-  "screenshot": "addons/UTILITIES_Add-On/thumbnail.png",
-  "description": "Love utility Add-Ons? Craft tons of helpful tools like item sorters, tree choppers, lava boats, and more on your world! Fully compatible with other Add-Ons.",
-  "fullDescription": "Love utility Add-Ons? In this pack we add T.O.N.S of them as craftable tools on YOUR WORLD! Craft tons of tools to help you on your world and is compatible with other Add-Ons!\n-- Includes --\n- Item sorter\n- Tree chopper\n- Waypoint adder\n- Portable camp\n- Lava boat\n- XP container\n+ AND MANY MORE!",
-  "rating": 4
-},
-{
+    "rating": 5,
+    "status": "update"
+  },
+  {
+    "name": "Village Cities Add-On",
+    "category": "addon",
+    "folder": "Village_Cities_Add-On",
+    "file": "https://archive.org/download/village-cities-add-on-addon/Village%20Cities%20Add-On%20%28addon%29.mcaddon",
+    "logo": "addons/Village_Cities_Add-On/logo.png",
+    "screenshot": "addons/Village_Cities_Add-On/thumbnail.png",
+    "description": "Discover huge Village Cities across the overworld. Purchase one and grow it into a thriving metropolis. Build your Village City empire.",
+    "fullDescription": "Discover huge Village Cities across the overworld. Purchase one and grow it into a thriving metropolis.\n\n- Own entire cities\n- Construct skyscrapers, shops and factories\n- Trade with 19 new villagers\n- Earn bank interest\n- Restore derelict buildings and upgrade your city\n- Defend against zombie invasions\n- Travel between cities by train\n\nBuild your Village City empire.",
+    "rating": 4,
+    "status": "new"
+  },
+  {
+    "name": "UTILITIES Add-On",
+    "category": "addon",
+    "folder": "UTILITIES_Add-On",
+    "file": "https://archive.org/download/utilities-add-on-addon/UTILITIES%20Add-On%20%28addon%29.mcaddon",
+    "logo": "addons/UTILITIES_Add-On/logo.png",
+    "screenshot": "addons/UTILITIES_Add-On/thumbnail.png",
+    "description": "Love utility Add-Ons? Craft tons of helpful tools like item sorters, tree choppers, lava boats, and more on your world! Fully compatible with other Add-Ons.",
+    "fullDescription": "Love utility Add-Ons? In this pack we add T.O.N.S of them as craftable tools on YOUR WORLD! Craft tons of tools to help you on your world and is compatible with other Add-Ons!\n-- Includes --\n- Item sorter\n- Tree chopper\n- Waypoint adder\n- Portable camp\n- Lava boat\n- XP container\n+ AND MANY MORE!",
+    "rating": 4,
+    "status": ""
+  },
+  {
     "name": "Essentials",
     "category": "addon",
     "folder": "Essentialsaddon",
@@ -41,9 +44,10 @@
     "screenshot": "addons/Essentialsaddon/thumbnail.png",
     "description": "Adds many useful features to Minecraft like tree breaker, ore scanner, portable crafting tools, teleporters, and more to make survival easier.",
     "fullDescription": "Essential Additions to Minecraft! Say goodbye to doing boring chores!\n\n• Repairable Anvil\n• Sideways Slabs\n• Storage Satchels\n• Automatic Crop Re-Planting\n• Portable Crafting Table, Ender Chest, and Furnace\n• Ore Breaker\n• Tree Breaker\n• Ore Scanners\n• Mining Helmet\n• Universal Remote – Change Time, Weather & More\n• Death Waypoint\n• Fake Blocks\n• Teleporters\n• ...and a lot more!",
-    "rating": 4.5
-},
-{
+    "rating": 4.5,
+    "status": ""
+  },
+  {
     "name": "44 Ways To prank Add-on",
     "category": "addon",
     "folder": "44WaysToprankAdd-on",
@@ -52,72 +56,79 @@
     "screenshot": "addons/44WaysToprankAdd-on/thumbnail.png",
     "description": "Adds 44 funny prank items like fake blocks, exploding beds, fake lava, and other surprises to trick your friends.",
     "fullDescription": "44 Ways to Prank Add-On brings 44 hilarious prank items to your world!\n\n• Trick friends with fake blocks\n• Exploding beds\n• Fake lava\n• Exploding cakes\n• Prank tables that spawn creepers\n• And many more surprises\n\nFun, unpredictable, and full of laughter every time you play!",
-    "rating": 4
-},
-{
+    "rating": 4,
+    "status": ""
+  },
+  {
     "name": "Streamer Simulator",
     "category": "world",
     "folder": "StreamerSimulator",
-    "file":"https://archive.org/download/streamer-simulator-world-template/Streamer%20Simulator%20%28world_template%29.mctemplate",
-    "logo":"addons/StreamerSimulator/logo.png",
-    "screenshot":"addons/StreamerSimulator/thumbnail.png",
-    "description":"Become a streamer, gain subscribers, upgrade your setup, and grow your streaming empire.",
+    "file": "https://archive.org/download/streamer-simulator-world-template/Streamer%20Simulator%20%28world_template%29.mctemplate",
+    "logo": "addons/StreamerSimulator/logo.png",
+    "screenshot": "addons/StreamerSimulator/thumbnail.png",
+    "description": "Become a streamer, gain subscribers, upgrade your setup, and grow your streaming empire.",
     "fullDescription": "Start from small beginnings streaming to 0 viewers in your mom's basement.\nThen grow a GIANT audience and live in an island mansion — this is Streamer Simulator!\n\n• Stream 5 custom mini-games to gain subscribers and coins\n• Random bonus events\n• Tons of custom streaming equipment\n• Customize your streaming setup\n• 2 free skins included\n• And more!",
-    "rating": 4.5
-},
-{
+    "rating": 4.5,
+    "status": ""
+  },
+  {
     "name": "100 Days Raft",
     "category": "world",
     "folder": "100DaysRaft",
-    "file":"https://archive.org/download/100-days-raft-world-template/100%20Days%20Raft%20%28world_template%29.mctemplate",
-    "logo":"addons/100DaysRaft/logo.png",
-    "screenshot":"addons/100DaysRaft/thumbnail.png",
-    "description":"Survive on a raft in the ocean by fishing, gathering resources, and expanding your raft.",
+    "file": "https://archive.org/download/100-days-raft-world-template/100%20Days%20Raft%20%28world_template%29.mctemplate",
+    "logo": "addons/100DaysRaft/logo.png",
+    "screenshot": "addons/100DaysRaft/thumbnail.png",
+    "description": "Survive on a raft in the ocean by fishing, gathering resources, and expanding your raft.",
     "fullDescription": "You're stranded on a raft in the middle of the ocean!\nSurvive by fishing, collecting materials from the water, and expanding your raft.\nTrade with Milo for maps to discover new islands.\nCan you survive 100 days on a raft?\n\n• Sharks\n• Custom weapons\n• Custom raft with furniture",
-    "rating": 3.5
-},
-{
+    "rating": 3.5,
+    "status": ""
+  },
+  {
     "name": "RLCraft Bedrock Edition 1.2",
     "category": "world",
     "folder": "RLcraft",
-    "file":"https://archive.org/download/rlcraft-bedrock-edition-1.2-world-template/RLCraft%20Bedrock%20Edition%201.2%20%28world_template%29.mctemplate",
-    "logo":"addons/RLcraft/logo.png",
-    "screenshot":"addons/RLcraft/thumbnail.png",
-    "description":"A brutal hardcore survival experience with dungeons, dragons, new gear, and challenging gameplay.",
+    "file": "https://archive.org/download/rlcraft-bedrock-edition-1.2-world-template/RLCraft%20Bedrock%20Edition%201.2%20%28world_template%29.mctemplate",
+    "logo": "addons/RLcraft/logo.png",
+    "screenshot": "addons/RLcraft/thumbnail.png",
+    "description": "A brutal hardcore survival experience with dungeons, dragons, new gear, and challenging gameplay.",
     "fullDescription": "RLCraft is here — hardcore, unforgiving, and brutally challenging.\n\n• Explore new world generation with structures & dungeons\n• Progress your skills and wield powerful gear\n• Custom player and weapon animations\n• Elemental dragons\n• Based on the original RLCraft Modpack by Shivaxi\n• You're going to die… a lot",
-    "rating": 4.5
-},
-{
+    "rating": 4.5,
+    "status": ""
+  },
+  {
     "name": "Dark Fantasy Visual",
     "category": "texture",
     "folder": "DarkFantasyVisuals",
-    "file":"https://archive.org/download/rlcraft-bedrock-edition-1.2-world-template/RLCraft%20Bedrock%20Edition%201.2%20%28world_template%29.mctemplate",
-    "logo":"addons/DarkFantasyVisuals/logo.png",
-    "screenshot":"addons/DarkFantasyVisuals/thumbnail.png",
-    "description":"Adds dark fantasy visuals with moody lighting, shadows, and dramatic atmosphere.",
+    "file": "https://archive.org/download/rlcraft-bedrock-edition-1.2-world-template/RLCraft%20Bedrock%20Edition%201.2%20%28world_template%29.mctemplate",
+    "logo": "addons/DarkFantasyVisuals/logo.png",
+    "screenshot": "addons/DarkFantasyVisuals/thumbnail.png",
+    "description": "Adds dark fantasy visuals with moody lighting, shadows, and dramatic atmosphere.",
     "fullDescription": "Immerse yourself in dark fantasy visuals with moody lighting, deep shadows, realistic shading, and clear god rays for a dramatic atmosphere.\n\n[!] Dark Fantasy Visuals is not a shader.",
-    "rating": 4
-},
-{
+    "rating": 4,
+    "status": ""
+  },
+  {
     "name": "BackRoom Escape",
     "category": "world",
     "folder": "BackRoom",
-    "file":"https://archive.org/download/backroom-escape-world-template/Backroom%20Escape%20%28world_template%29.mctemplate%29.mctemplate",
-    "logo":"addons/BackRoom/logo.png",
-    "screenshot":"addons/BackRoom/thumbnail.png",
-    "description":"A horror experience with darkness, monsters, and intense survival gameplay.",
+    "file": "https://archive.org/download/backroom-escape-world-template/Backroom%20Escape%20%28world_template%29.mctemplate%29.mctemplate",
+    "logo": "addons/BackRoom/logo.png",
+    "screenshot": "addons/BackRoom/thumbnail.png",
+    "description": "A horror experience with darkness, monsters, and intense survival gameplay.",
     "fullDescription": "Mom?! Are you here? RUN!\n\nNO ONE CAN ESCAPE\n\n• Total darkness\n• Scary monster\n• 5 levels\n• Survivor skins",
-    "rating": 2.5
-},
-{
+    "rating": 2.5,
+    "status": ""
+  },
+  {
     "name": "World Builder 16.1",
     "category": "addon",
     "folder": "worldbuilder",
-    "file":"https://archive.org/download/world-builder-1.6.1-add-on-addon/World%20Builder%201.6.1%20Add-On%20%28addon%29.mcaddon",
-    "logo":"addons/worldbuilder/pack_icon.png",
-    "screenshot":"addons/worldbuilder/image_1.jpg",
-    "description":"Fast & easy world editing tool.",
+    "file": "https://archive.org/download/world-builder-1.6.1-add-on-addon/World%20Builder%201.6.1%20Add-On%20%28addon%29.mcaddon",
+    "logo": "addons/worldbuilder/pack_icon.png",
+    "screenshot": "addons/worldbuilder/image_1.jpg",
+    "description": "Fast & easy world editing tool.",
     "fullDescription": "Unleash your creativity with World Builder, the ultimate building tool!\nWith intuitive selection, effortless copy-pasting, quick undo/redo actions, & custom brushes, you can easily edit entire landscapes & structures.\nCrafting your dream world has never been simpler, or faster!\n\n- Copy, Cut, Paste, Rotate & Flip\n- Custom Brushes\n- Terrain Painting Tools\n- And much more!",
-    "rating": 4.5
-}
+    "rating": 4.5,
+    "status": ""
+  }
 ]
