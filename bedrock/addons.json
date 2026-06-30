@@ -1,5 +1,16 @@
 [
   {
+    "name": "BACKROOMS Add-On",
+    "category": "addon",
+    "folder": "BACKROOMS_Add-On",
+    "file": "https://archive.org/download/backrooms-add-on-addon/BACKROOMS%20Add-On%20%28addon%29.mcaddon",
+    "logo": "addons/BACKROOMS_Add-On/logo.png",
+    "screenshot": "addons/BACKROOMS_Add-On/thumbnail.png",
+    "description": "Noclip out of your world… into something that shouldn’t load. Escape a procedurally generated Backrooms Lobby, or be hunted by REDACTED.",
+    "fullDescription": "Noclip out of your world… into something that shouldn’t load.\nA procedurally generated Lobby with sub-biomes, lost loot, and intelligent entities that react to your behavior. Escape, or be hunted by REDACTED.\n\n- Distinct biomes with unique threats\n- AI entity behaviors\n- Death Level parkour escape\n- Visor reveals hidden loot and entities\n- First Backrooms generation Add-On",
+    "rating": 4.5,
+    "status": "new"
+  {
     "name": "Action And Stuff 1.11",
     "category": "texture",
     "folder": "ActionsStuff1.11",
@@ -21,7 +32,7 @@
     "description": "Discover huge Village Cities across the overworld. Purchase one and grow it into a thriving metropolis. Build your Village City empire.",
     "fullDescription": "Discover huge Village Cities across the overworld. Purchase one and grow it into a thriving metropolis.\n\n- Own entire cities\n- Construct skyscrapers, shops and factories\n- Trade with 19 new villagers\n- Earn bank interest\n- Restore derelict buildings and upgrade your city\n- Defend against zombie invasions\n- Travel between cities by train\n\nBuild your Village City empire.",
     "rating": 4,
-    "status": "new"
+    "status": ""
   },
   {
     "name": "UTILITIES Add-On",
