@@ -1,4 +1,16 @@
 [
+    {
+    "name": "Dynamic Details",
+    "category": "texture",
+    "folder": "Dynamic_Details",
+    "file": "",
+    "logo": "addons/Dynamic_Details/logo.png",
+    "screenshot": "addons/Dynamic_Details/thumbnail.png",
+    "description": "Dynamic Details introduces a brand new level of visual depth to your world. Striking 3D effects, breathtaking atmosphere, cinematic water, and so much more!",
+    "fullDescription": "Dynamic Details introduces a brand new level of visual depth to your world. Striking 3D effects, breathtaking atmosphere, cinematic water & so much more!\n\n- Stunning lighting, realistic water & natural colors\n- Detailed 3D textures true to the Vanilla style\n- Glowing ores & colorful lights\n- Block variants for an immersive feel\n- Choose from 3 versions: Vanilla, 64x & 128x",
+    "rating": 4,
+    "status": "new"
+  },
   {
     "name": "BACKROOMS Add-On",
     "category": "addon",
@@ -9,7 +21,7 @@
     "description": "Noclip out of your world… into something that shouldn’t load. Escape a procedurally generated Backrooms Lobby, or be hunted by REDACTED.",
     "fullDescription": "Noclip out of your world… into something that shouldn’t load.\nA procedurally generated Lobby with sub-biomes, lost loot, and intelligent entities that react to your behavior. Escape, or be hunted by REDACTED.\n\n- Distinct biomes with unique threats\n- AI entity behaviors\n- Death Level parkour escape\n- Visor reveals hidden loot and entities\n- First Backrooms generation Add-On",
     "rating": 4.5,
-    "status": "new"
+    "status": ""
   },
   {
     "name": "Action And Stuff 1.11",
