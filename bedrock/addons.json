@@ -1,4 +1,15 @@
-[
+[  {
+    "name": "Shine",
+    "category": "texture",
+    "folder": "Shine",
+    "file": "https://archive.org/download/shine-resources/Shine%20%28resources%29.mcpack",
+    "logo": "addons/Shine/logo.png",
+    "screenshot": "addons/Shine/thumbnail.png",
+    "description": "Explore a crisp, clean and bright world with Giggle Block Studios' 'Shine' texture pack!",
+    "fullDescription": "Explore a crisp, clean and bright world with Giggle Block Studios' \"Shine\" texture pack!\n\n- Smooth, plastic-like textures\n- Cute, minimalist mobs to discover\n- Clean, bright and beautiful textures to immerse yourself in",
+    "rating": 4,
+    "status": "new"
+  },
     {
     "name": "Dynamic Details",
     "category": "texture",
@@ -9,7 +20,7 @@
     "description": "Dynamic Details introduces a brand new level of visual depth to your world. Striking 3D effects, breathtaking atmosphere, cinematic water, and so much more!",
     "fullDescription": "Dynamic Details introduces a brand new level of visual depth to your world. Striking 3D effects, breathtaking atmosphere, cinematic water & so much more!\n\n- Stunning lighting, realistic water & natural colors\n- Detailed 3D textures true to the Vanilla style\n- Glowing ores & colorful lights\n- Block variants for an immersive feel\n- Choose from 3 versions: Vanilla, 64x & 128x",
     "rating": 4,
-    "status": "new"
+    "status": ""
   },
   {
     "name": "BACKROOMS Add-On",
